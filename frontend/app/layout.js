@@ -13,8 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} m-0 p-0 relative h-fit mx-auto `}>
-      <div class="absolute top-0 w-full h-full bg-gradient-to-b from-white/20 -z-[10] to-gray-300 blur-sm"></div>
+      <body className={`${inter.className} m-0 p-0 w-full h-full relative mx-auto `}>
+      <div class="absolute top-0 w-full  bg-gradient-to-b from-white/20 -z-[10] to-gray-300 blur-sm"></div>
         <Navbar />
         <HeroSection />
         {children}
