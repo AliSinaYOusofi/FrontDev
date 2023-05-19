@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import { animated, useSpring } from '@react-spring/web'
-export default function HeroSection() {
+export default function     HeroSection() {
 
     const [spring, api] = useSpring(
         () => ({
@@ -42,7 +42,7 @@ export default function HeroSection() {
                     
 
                         <div className="mt-5 max-w-3xl">
-                            <p className="text-lg text-gray-600 dark:text-gray-400">Unleash your creativity with HTML, CSS, JS, and React. Learn how to build stunning and dynamic web pages that will captivate and engage your audience. Start your web development journey today!</p>
+                            <p className="text-lg text-gray-500 ">Unleash your creativity with HTML, CSS, JS, and React. Learn how to build stunning and dynamic web pages that will captivate and engage your audience. Start your web development journey today!</p>
                         </div>
 
                     
