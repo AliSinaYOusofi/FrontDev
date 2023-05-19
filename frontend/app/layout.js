@@ -2,6 +2,9 @@ import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import HeroSection from '@/components/HeroSection/HeroSection'
+import InfoContainer from '@/components/GlobalTechInfo/InfoContainer'
+import About from '@/components/AboutUs/About'
+import Footer from '@/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +20,9 @@ export default function RootLayout({ children }) {
       <div class="absolute top-0 w-full  bg-gradient-to-b from-white/20 -z-[10] to-gray-300 blur-sm"></div>
         <Navbar />
         <HeroSection />
+        <InfoContainer />
+        <About />
+        <Footer />
         {children}
       </body>
     </html>
