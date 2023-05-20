@@ -1,3 +1,4 @@
+import React from 'react'
 import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -5,6 +6,9 @@ import HeroSection from '@/components/HeroSection/HeroSection'
 import InfoContainer from '@/components/GlobalTechInfo/InfoContainer'
 import About from '@/components/AboutUs/About'
 import Footer from '@/components/Footer/Footer'
+
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,8 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} m-0 p-0 w-full h-full relative mx-auto `}>
-      <div class="absolute top-0 w-full  bg-gradient-to-b from-white/20 -z-[10] to-gray-300 blur-sm"></div>
+      <body className={`${inter.className} m-0 p-0 w-full h-full  mx-auto overflow-x-hidden`}>
+      <div className="absolute top-0 w-full  bg-gradient-to-b from-white/20 -z-[10] to-gray-300 blur-sm"></div>
+        
         <Navbar />
         <HeroSection />
         <InfoContainer />

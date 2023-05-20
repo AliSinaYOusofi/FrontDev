@@ -1,45 +1,82 @@
+"use client";
+
+import { useInView, animated } from '@react-spring/web'
 import React from 'react'
 
 export default function About() {
 
+    const [vision, visionSprings] = useInView(
+        () => ({
+            from: {
+                x: -100,
+                opacity: 0
+            },
+            to: {
+                x: 0,
+                opacity: 1
+            }
+        }),
+        {
+            once: true
+        }
+    );
+
+    const [poofs, poofsSprings] = useInView(
+        () => ({
+            
+            from: {
+                x: 100,
+                opacity: 0
+            },
+
+            to: {
+                x: 0,
+                opacity: 1
+            }
+        }),
+        {
+            once: true
+        }
+    )
     return (
-        <div className="flex mt-20 w-[90%] mx-auto items-center justify-center gap-x-4">
-            <div className="w-[70%]">
+        <div className="mt-[7rem]  w-[60%] mx-auto items-center justify-center gap-x-4">
+            <animated.div ref={vision} style={visionSprings} className="">
                 <h2 className="text-3xl text-gray-600 font-bold lg:text-4xl">
                     Our vision
                 </h2>
                 <p className="mt-3 text-gray-600 ">
-                    For as long as there have been cities, the public square has been a fundamental part of the urban landscape - an open, approachable space to meet and engage with friends and neighbours. Space aims to capture this spirit of bringing people together in an exciting, welcoming environment.
+                Our vision is to empower learners of all levels to master the fundamentals of web development by providing comprehensive and engaging educational resources on HTML, CSS, JavaScript, React, and Git, ultimately enabling them to build dynamic and interactive web applications.
                 </p>
-            </div>
+            </animated.div>
 
-            <div className="space-y-6 lg:space-y-10">
+            <animated.div ref={poofs} style={poofsSprings} className="space-y-6 lg:space-y-10 mt-10">
             
                 <div className="flex">
                     <svg className="flex-shrink-0 mt-2 h-6 w-6 text-gray-600 " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                        <path fillRule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
                         <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
                     </svg>
                     <div className="ml-5 sm:ml-8">
                         <h3 className="text-base sm:text-lg font-semibold text-gray-600 ">
-                            High quality Co-Living spaces
+                            High quality Content
                         </h3>
                         <p className="mt-1 text-gray-500 ">
-                            Our fully furnished spaces are designed and purpose-built with Co-Living in mind, featuring high-end finishes and amenities that go far beyond traditional apartment buildings.
+                            Our content is written by experienced web developers and educators with a passion for teaching and a dedication to accuracy, ensuring that learners receive high-quality, reliable information. We strive to provide engaging and interactive learning experiences to enhance their skills and knowledge.
                         </p>
                     </div>
                 </div>
                 
                 <div className="flex">
-                    <svg className="flex-shrink-0 mt-2 h-6 w-6 text-gray-600 " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                    <svg className="flex-shrink-0 mt-2 h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
                     </svg>
                     <div className="ml-5 sm:ml-8">
                         <h3 className="text-base sm:text-lg font-semibold text-gray-600 ">
-                            Fostering vibrant communities
+                            Up to date content
                         </h3>
                         <p className="mt-1 text-gray-500 ">
-                            Our passion is bringing people together. Beyond creating beautiful spaces, we provide shared experiences.
+                        We regularly review and update our content to ensure that it is current and reflects the latest trends and best practices in web development, providing learners with relevant and up-to-date information. Our commitment to staying current ensures that our learners are equipped with the most relevant knowledge and skills for their web development journey.
                         </p>
                     </div>
                 </div>
@@ -50,14 +87,14 @@ export default function About() {
                     </svg>
                     <div className="ml-5 sm:ml-8">
                         <h3 className="text-base sm:text-lg font-semibold text-gray-600 ">
-                            Simple and all-inclusive
+                            Simple
                         </h3>
                         <p className="mt-1 text-gray-500 ">
-                            We worry about the details so that our residents don't have to. From our online application process to simple, all-inclusive billing we aim to make the living experience as effortless as possible.
+                            We believe that learning should be accessible to everyone, so we strive to present complex concepts in plain language. Our content is written in simple words and easy-to-understand examples, ensuring that learners of all levels can follow along and apply the knowledge gained.
                         </p>
                     </div>
                 </div>
-            </div>
+            </animated.div>
         </div>
     )
 }
