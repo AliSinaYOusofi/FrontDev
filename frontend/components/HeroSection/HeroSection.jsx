@@ -22,6 +22,10 @@ export default function     HeroSection() {
         })
     )
 
+    const moveInfoContainer = () => {
+        document.getElementById("info").scrollIntoView({behavior: "smooth"});
+    }
+
     return (
     
         <animated.div className="relative overflow-hidden" key={spring.key} style={{...spring}}>
@@ -30,7 +34,7 @@ export default function     HeroSection() {
                 <div className="max-w-[85rem] h-fit mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
                     <div className="max-w-2xl text-center mx-auto">
                         <p className="inline-block text-sm animate-pulse font-medium text-white p-1 rounded-sm bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">
-                        Experimental
+                            Experiment
                         </p>
 
                     
@@ -54,7 +58,7 @@ export default function     HeroSection() {
                                 </svg>
                             </a>
                         </div>
-                        <div className="w-full flex items-center js justify-center mt-0  md:mt-20">
+                        <div onClick={moveInfoContainer} className="w-full flex items-center js justify-center mt-0  md:mt-20">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 bg-gray-200 p-1 rounded-full text-black/50 cursor-pointer transition-all duration-300 hover:translate-y-1">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                             </svg>

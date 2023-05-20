@@ -16,10 +16,38 @@ export default function InfoContainer() {
                 opacity: 1,
                 y: 0,
             },
+            delay: 500,
         }),
         {
             once: true
         }
+    )
+
+    const [containerRef, sprintValues] = useInView(
+        () => ({
+            from: {
+                opacity: 0,
+                y: 100,
+              },
+            to: {
+                opacity: 1,
+                y: 0,
+            },
+            
+            delay: 1000,
+            
+            config: {
+                tension: 200, 
+                friction: 18,
+                threshold: 0.25,
+                clamp: true,
+                duration: 1000,
+            },
+        }),
+        {
+            once: true
+        }
+        
     )
 
     const htmlSvg =  <svg
@@ -49,6 +77,15 @@ export default function InfoContainer() {
             <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z" />
         </svg>
 
+    
+    const gitSvg = <svg
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            className="mr-1 w-6 h-6"
+        >
+        <path d="M15.698 7.287L8.712.302a1.03 1.03 0 00-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 011.55 1.56l1.773 1.774a1.224 1.224 0 011.267 2.025 1.226 1.226 0 01-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 11-1.008-.036V5.887a1.226 1.226 0 01-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 000 1.457l6.986 6.986a1.03 1.03 0 001.457 0l6.953-6.953a1.031 1.031 0 000-1.457" />
+    </svg>
+
     const reactSvg = <svg
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -63,37 +100,56 @@ export default function InfoContainer() {
 
     return (
         <>
-            <animated.h1 ref={ref} style={springs} className="text-4xl text-center font-extrabold mb-10 mt-5 text-gray-600"> Learn Step by Step</animated.h1>
-            <div className=" w-[90%] px-2 flex md:flex-row flex-col mx-auto gap-x-2">
+            <animated.h1 id="info" ref={ref} style={springs} className="text-4xl text-center font-extrabold mb-10 mt-5 text-gray-600"> Learn Step by Step</animated.h1>
+            
+            <animated.div ref={containerRef} style={sprintValues} className=" w-[90%] flex-wrap items-start justify-start px-2 flex md:flex-row flex-col mx-auto gap-x-2">
+                <div>
+                    <TechInfo
+                        step={"1"} 
+                        svg={htmlSvg} 
+                        name="html" 
+                        description={"HTML is a markup language used to create web pages with structured content, layout, and media such as images and videos."}
+                    />
+                </div>
 
-                <TechInfo
-                    step={"1"} 
-                    svg={htmlSvg} 
-                    name="html" 
-                    description={"HTML is a markup language used to create web pages with structured content, layout, and media such as images and videos."}
-                />
+                <div>
 
-                <TechInfo
-                    step={"2"}
-                    svg={cssSvg} 
-                    name="css" 
-                    description={"CSS is a style sheet language used to describe the presentation of a document written in a markup language such as HTML."}
-                />
+                    <TechInfo
+                        step={"2"}
+                        svg={cssSvg} 
+                        name="css" 
+                        description={"CSS is a style sheet language used to describe the presentation of a document written in a markup language such as HTML."}
+                    />
+                </div>
+                <div>
 
-                <TechInfo
-                    step={"3"}
-                    name="javascript"
-                    description={"JavaScript is a high-level programming language that is commonly used for developing and implementing interactive web functionality."}
-                    svg={jsSvg}
-                />
+                    <TechInfo
+                        step={"3"}
+                        name="javascript"
+                        description={"JavaScript is a high-level programming language that is commonly used for developing and implementing interactive web functionality."}
+                        svg={jsSvg}
+                    />
+                </div>
 
-                <TechInfo
-                    step={"4"}
-                    name="React"
-                    description={"React is a JavaScript library for building user interfaces."}
-                    svg={reactSvg}
-                />
-            </div>
+                <div>
+                    <TechInfo
+                        step="4"
+                        name="Git"
+                        description={"Git is a widely used distributed version control system used for tracking changes in source code during software development. It helps developers to collaborate and maintain a clean codebase."}
+                        svg={gitSvg}
+                    />
+                </div>
+
+                <div className="h-full">
+                    <TechInfo
+                        step={"5"}
+                        name="React"
+                        description={"React.js is an open-source JavaScript library used for building user interfaces. It is maintained by Facebook and helps developers create reusable UI components for web applications. "}
+                        svg={reactSvg}
+                    />
+                </div>
+                
+            </animated.div>
         </>
     )
 }
