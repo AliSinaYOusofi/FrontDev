@@ -2,4 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-  
+.content_container h1, .content_container h2 {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.content_container p, .content_container ul, .content_container li {
+    font-family: sans-serif, "Open Sans", "Helvetica Neue";
+}
+
+.content_container ul {
+    line-height: 2rem;
+}

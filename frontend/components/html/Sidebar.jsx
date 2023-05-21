@@ -3,6 +3,8 @@
 import { useSpring, animated } from '@react-spring/web';
 import React, { useState } from 'react'
 import Introduction from './Introduction';
+import Basics from './Basics';
+import Attributes from './Attributes';
 
 export default function Sidebar() {
 
@@ -67,10 +69,10 @@ export default function Sidebar() {
                     </div>
                 </form>
 
-                <ul className="w-fit md:px-4 px-1 text-xs md:text-base overflow-scroll h-screen list-inside text-gray-700 ">
+                <ul className="w-fit md:px-4 px-1 text-xs md:text-base overflow-scroll h-full list-inside text-gray-700 ">
                     <li onClick={() => setComponent(<Introduction />)} className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">Introduction</li>
-                    <li className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">What is HTML?</li>
-                    <li className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">History of HTML</li>
+                    <li onClick={() => setComponent(<Basics />)} className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">Basics</li>
+                    <li onClick={() => setComponent(<Attributes />)} className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">Attributes</li>
                     <li className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">HTML syntax</li>
                     <li className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">HTML Basics</li>
                     <li className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer duration-300">Elements and attributes</li>
@@ -125,7 +127,7 @@ export default function Sidebar() {
                     <li className="hover:bg-gray-100 p-2 rounded-md transition-all cursor-pointer  duration-300">New features</li>
                 </ul>
             </animated.div>
-            <div>
+            <div className="w-[60%] mx-auto mt-2 content_container">
                 {component}
             </div>
         </div>
