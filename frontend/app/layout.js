@@ -1,7 +1,11 @@
 import React from 'react'
 import './globals.css'
+import 'prismjs/themes/prism-tomorrow.css';
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
+import Roboto from 'next/font/google';
+import { Poppins } from 'next/font/google';
+
 
 export const metadata = {
   title: 'Create Next App',
