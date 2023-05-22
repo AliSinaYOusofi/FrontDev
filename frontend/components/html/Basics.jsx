@@ -6,7 +6,7 @@ import CodeBlock from '../Code Block/CodeBlock';
 
 export default function Basics() {
     
-    const [spring, api] = useSpring(
+    const [lessonsSprings, lessonAPI] = useSpring(
         () => ({
             from: { 
                 x: -100,
@@ -27,7 +27,7 @@ export default function Basics() {
     )
 
     return (
-        <animated.div className="basics" key={spring.key} style={...spring}>
+        <animated.div className="basics" key={lessonsSprings.key} style={...lessonsSprings}>
             <div>
                 <h1 className="content_header text-[1.5rem]">HTML {"(Hypertext Markup Language)"}</h1>
                 
@@ -62,6 +62,7 @@ export default function Basics() {
     </html>`
                     }
                     language="html"
+                    showCodeEditor={true}
                 />
 
                 <h2 className="h2_content mt-4">Let's break this down:</h2>
@@ -102,6 +103,7 @@ export default function Basics() {
     <h6>This is a Heading Level 6</h6>`
                     }
                     language="html"
+                    showCodeEditor={true}
                 />
             </div>
 
@@ -118,8 +120,9 @@ export default function Basics() {
                 <h1 className="text-[1.5rem] mt-10">Links</h1>
                 <p className="mt-1"> Links are used to navigate the webpage. You can create a link using the a tag.</p>
                 <CodeBlock 
-                    code={` <a href="https://www.google.com">This is a link</a>`}
+                    code={` <a href="https://www.google.com">This is a google link</a>`}
                     language="html"
+                    showCodeEditor={true}
                 />
             </div>
 
@@ -129,6 +132,7 @@ export default function Basics() {
                 <CodeBlock 
                     code={` <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo"/>`}
                     language="html"
+                    showCodeEditor={true}
                 />
             </div>
             <div>
@@ -143,6 +147,7 @@ export default function Basics() {
     </ul>`
                     }
                     language="html"
+                    showCodeEditor={true}
                 />
             </div>
 
@@ -161,6 +166,7 @@ export default function Basics() {
     </div>`
                 }
                 language="html"
+                showCodeEditor={true}
                 />
             </div>
             <div>
@@ -168,7 +174,7 @@ export default function Basics() {
                 <p className="mt-2">
                     In conclusion, HTML is an incredibly fundamental skill for web developers 
                     and designers. With HTML, you can create a structured and organized layout 
-                    for various types of content. In this blog, we covered the basic structure of 
+                    for various types of content. In this part, we covered the basic structure of 
                     HTML, common HTML elements, and organized them in a way that even beginners can 
                     learn quickly. Keep practicing, 
                     and you will surely become comfortable with HTML in no time.
