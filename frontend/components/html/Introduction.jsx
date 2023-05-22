@@ -55,18 +55,19 @@ export default function Introduction() {
             </body>
         </html>`
                 } 
-                    language="html" 
+                    language="html"
+                    showCodeEditor={true}
                 />
 
                 <h2 className="h2_content mt-4"> Let's break this down: </h2>
-                <ul className="list-disc ml-10 mt-2">
+                <ol className="list-decimal ml-10 mt-2">
                     <li> The {"<"}!DOCTYPE html{">"} declaration at the beginning defines the version of HTML that's being used.</li>
                     <li>The html element is the root element of an HTML page. It contains all the other elements.</li>
                     <li>The head element contains meta information about the document, such as the title of the page that appears in the browser tab.</li>
                     <li>The title element is a sub-element of the head element and defines the title of the page.</li>
                     <li>The body element contains the main content of the document, such as headings, paragraphs, images, etc.</li>
                     <li>The h1 and p elements are examples of HTML elements that can be used to display text on a webpage.</li>
-                </ul>
+                </ol>
             </div>
             <div>
                 <h1 className="content_header text-[1.5rem] mt-10">HTML elements</h1>
@@ -92,7 +93,7 @@ export default function Introduction() {
 
                 
                 <h2 className="h2_content mt-10">HTML elements are usually written using a start tag and an end tag, like this:</h2>
-                <CodeBlock code={`<p>This is a paragraph.</p>`} language="html" />
+                <CodeBlock code={`<p>This is a paragraph.</p>`} language="html" showCodeEditor={true}/>
                 <p className="paragraph mt-2">
                     The start tag {"(<p>)"} tells the browser where the element begins, and the end tag {"(</p>)"} tells the browser where the element ends. The content between the start and end tags is the content of the element.
                 </p>
@@ -109,7 +110,7 @@ export default function Introduction() {
                 </ul>
 
                 <h2 className="h2_content mt-2">Attributes are added to the start tag of an element, like this:</h2>
-                <CodeBlock code={`<a href="https://www.example.com">Example link</a>`} language={"html"} />
+                <CodeBlock code={`<a href="https://www.twitter.com">Twitter Link</a>`} language={"html"} showCodeEditor={true}/>
             </div>
 
             <div>

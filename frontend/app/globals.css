@@ -8,9 +8,21 @@
 }
 
 .content_container p, .content_container ul, .content_container li {
-    font-family: sans-serif, "Open Sans", "Helvetica Neue";
+    font-family: Poppins, 
 }
 
 .content_container ul {
     line-height: 2rem;
+}
+
+.sidebar_li li {
+    transition: all 0.2s ease-in;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.sidebar_li li:hover {
+    background-color: #f4f4f5;
+    cursor: pointer;
 }

@@ -3,8 +3,9 @@
 import Prism from 'prismjs';
 import 'prism-themes/themes/prism-atom-dark.css';
 import React, { useEffect, useState } from 'react'
+import CodeEditor from '../Code/CodeEditor';
 
-export default function CodeBlock({code, language}) {
+export default function CodeBlock({code, language, showCodeEditor}) {
     
     const [clipboard, setClipboard] = useState(false);
 
@@ -60,6 +61,7 @@ export default function CodeBlock({code, language}) {
                     </svg>
                 }
             </div>
+            <CodeEditor code={code} showCodeEditor={showCodeEditor}/>
         </div>
     )
 }
