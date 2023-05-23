@@ -1,11 +1,6 @@
 import React from 'react'
 import './globals.css'
 import 'prismjs/themes/prism-tomorrow.css';
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
-import Roboto from 'next/font/google';
-import { Poppins } from 'next/font/google';
-
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} m-0 p-0 w-full h-full  mx-auto overflow-x-hidden`}>
+      <body className={`m-0 p-0 w-full h-full  mx-auto overflow-x-hidden`}>
       <div className="absolute top-0 w-full  bg-gradient-to-b from-white/20 -z-[10] to-gray-300 blur-sm"></div>
         
        

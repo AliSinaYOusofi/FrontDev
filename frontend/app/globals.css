@@ -1,18 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.content_container h1, .content_container h2 {
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
+.content_container h1 {
+    @apply block p-1 md:p-0 text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl;
 }
 
 .content_container p, .content_container ul, .content_container li {
-    font-family: Poppins, 
+    @apply text-xl text-gray-700 tracking-tighter mt-5;
+    font-family: 'Roboto Mono', sans-serif;
 }
 
 .content_container ul {
-    line-height: 2rem;
+    line-height: 3rem;
+}
+
+.content_container ul li {
+    margin-top: 10px;
 }
 
 .sidebar_li li {
