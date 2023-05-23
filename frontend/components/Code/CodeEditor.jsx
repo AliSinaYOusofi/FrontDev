@@ -20,7 +20,7 @@ export default function CodeEditor({code, showCodeEditor}) {
         <>
             <h1 className="text-[1.5rem] mt-5"> Try it yourself </h1>
 
-            <div className="">
+            <div className="mt-4">
                 <div className="bg-gray-100 rounded-md p-4">
                     <CodeMirror
                         value={newCode}
@@ -36,9 +36,9 @@ export default function CodeEditor({code, showCodeEditor}) {
                     />
                 </div>
 
-                <h1 className="text-[1.5rem] mt-2">Output</h1>
+                <h1 className="text-[1.5rem] mt-4">Output</h1>
 
-                <div className="bg-gray-100 rounded-md p-4 mt-2">
+                <div className="bg-gray-100 rounded-md p-4 mt-4">
                     <Preview code={newCode}/>
                 </div>
             </div>

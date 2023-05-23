@@ -25,7 +25,7 @@ export default function CodeBlock({code, language, showCodeEditor}) {
     }
 
     return (
-        <div className="relative mt-2">
+        <div className="relative mt-5">
             <pre className="">
                 <code className={`rounded-md p-3 mr-10 language-${language}`}>
                     {code}
