@@ -82,32 +82,72 @@ export default function Sidebar() {
         }
     };
     
+    const handleMenuItemClick = (item) => {
+        switch (item) {
+            case "Introduction":
+                setCurrentPage(0);
+                setComponent(componentsArray[0])
+                break;
+            case "Basics":
+                setCurrentPage(1);
+                setComponent(componentsArray[1])
+                
+                break;
+            case "Attributes":
+                setCurrentPage(2);
+                setComponent(componentsArray[2])
+                
+                break;
+            case "Headings":
+                setCurrentPage(3);
+                setComponent(componentsArray[3])
+                break;
+            case "Paragraphs":
+                setCurrentPage(4);
+                setComponent(componentsArray[4])
+                
+                break;
+            case "Style":
+                setCurrentPage(5);
+                setComponent(componentsArray[5])
+                
+                break;
+            case "Text Formatting":
+                setCurrentPage(6);
+                setComponent(componentsArray[6])
+                break;
+            default:
+                break;
+        }
+    }
+    
     const menuItems = [
-        <li onClick={() => setComponent(<Introduction />)} className="">
+        
+        <li onClick={() => handleMenuItemClick("Introduction")} className="">
             Introduction
         </li>,
 
-        <li onClick={() => setComponent(<Basics />)} className="">
+        <li onClick={() => handleMenuItemClick("Basics")} className="">
             Basics
         </li>,
 
-        <li onClick={() => setComponent(<Attributes />)} className="">
+        <li onClick={() => handleMenuItemClick("Attributes")} className="">
             Attributes
         </li>,
 
-        <li onClick={() => setComponent(<Headings />)} className="">
+        <li onClick={() => handleMenuItemClick("Headings")} className="">
             Headings
         </li>,
 
-        <li onClick={() => setComponent(<Paragraphs />)} className="">
+        <li onClick={() => handleMenuItemClick("Paragraphs")} className="">
             Paragraphs
         </li>,
 
-        <li onClick={() => setComponent(<Style />)} className="">
+        <li onClick={() => handleMenuItemClick("Style")} className="">
             Style
         </li>,
 
-        <li onClick={() => setComponent(<TextFormatting />)} className="">
+        <li onClick={() => handleMenuItemClick("Text Formatting")} className="">
             Text Formatting
         </li>,
     ];
