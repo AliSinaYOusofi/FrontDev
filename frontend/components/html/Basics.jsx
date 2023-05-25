@@ -3,28 +3,11 @@
 import React from 'react'
 import {animated, useSpring} from '@react-spring/web';
 import CodeBlock from '../Code Block/CodeBlock';
+import useSlideAnimation from '@/hooks/useSlideAnimation';
 
 export default function Basics() {
     
-    const [lessonsSprings, lessonAPI] = useSpring(
-        () => ({
-            from: { 
-                x: -100,
-                opacity: 0
-            },
-            to: { 
-                x: 0,
-                opacity: 1,
-            },
-            config: {
-                damping: 400,
-                clamp: true,
-                tension: 50,
-                friction: 10
-            }
-        }),
-        
-    )
+    const [lessonsSprings, lessonAPI] = useSlideAnimation();
 
     return (
         <animated.div className="basics" key={lessonsSprings.key} style={...lessonsSprings}>

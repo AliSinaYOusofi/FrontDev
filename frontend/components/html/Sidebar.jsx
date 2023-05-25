@@ -1,6 +1,6 @@
 "use client";
 
-import { useSpring, animated } from "@react-spring/web";
+import { animated } from "@react-spring/web";
 import React, {useEffect, useState } from "react";
 import Introduction from "./Introduction";
 import Basics from "./Basics";
@@ -9,6 +9,14 @@ import Headings from "./Headings";
 import Paragraphs from "./Paragraphs";
 import Style from "./Style";
 import TextFormatting from "./TextFormatting";
+import useSlideAnimation from "@/hooks/useSlideAnimation";
+import Quotation from "./Quotation";
+import Comments from "./Comments";
+import Project1 from "./Project1";
+import Links from "./Links";
+import Images from "./Images";
+import Lists from "./Lists";
+import Tables from "./Tables";
 
 export default function Sidebar() {
     const [component, setComponent] = useState(null);
@@ -21,6 +29,13 @@ export default function Sidebar() {
         <Paragraphs />,
         <Style />,
         <TextFormatting />,
+        <Quotation />,
+        <Comments />,
+        <Project1 />,
+        <Links />,
+        <Images />,
+        <Lists />,
+        <Tables />
     ];
 
     const liArray = [
@@ -30,27 +45,17 @@ export default function Sidebar() {
         "Headings",
         "Paragraphs",
         "Style",
-        "Text Formatting"
+        "Text Formatting",
+        "Quotation",
+        "Comments",
+        "First Project",
+        "Hyperlinks",
+        "Image",
+        "Lists",
+        "Tables"
     ]
     
-    const [spring, api] = useSpring(() => ({
-        from: {
-            x: -100,
-            opacity: 0,
-        },
-
-        to: {
-            x: 0,
-            opacity: 1,
-        },
-
-        config: {
-            damping: 400,
-            clamp: true,
-            tension: 50,
-            friction: 10,
-        },
-    }));
+    const [spring, api] = useSlideAnimation();
 
     const [currentPage, setCurrentPage] = useState(null);
     const totalPages = componentsArray.length - 1;

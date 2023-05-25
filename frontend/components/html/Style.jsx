@@ -1,9 +1,14 @@
+"use client";
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock'
-
+import { animated, useSpring } from '@react-spring/web';
+import useSlideAnimation from '@/hooks/useSlideAnimation';
 export default function Style() {
+
+    const [spring, api] = useSlideAnimation();
+
     return (
-        <div>
+        <animated.div style={...spring} key={spring.key}>
             <h1>The Style Attribute </h1>
             <p>
                 The "style" attribute is a powerful tool in web development that allows developers to 
@@ -32,6 +37,6 @@ export default function Style() {
             <p>
                 In summary, the "style" attribute is a powerful tool in web development that allows developers to apply CSS rules directly to HTML elements. It can be useful for quick and small styling adjustments, but should be used sparingly and with consideration for the overall structure and organization of the code.
             </p>
-        </div>
+        </animated.div>
     )
 }

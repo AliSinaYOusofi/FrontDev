@@ -1,9 +1,14 @@
+"use client";
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock'
-
+import { animated, useSpring } from '@react-spring/web';
+import useSlideAnimation from '@/hooks/useSlideAnimation';
 export default function TextFormatting() {
+
+    const [spring, api] = useSlideAnimation();
+    
     return (
-        <div>
+        <animated.div style={spring} key={spring.key}>
             <h1> Text formatting </h1>
             <p>
                 Text formatting is an important aspect of web development that can make your content 
@@ -48,6 +53,6 @@ export default function TextFormatting() {
 
             <p> These are just a few of the many ways to format text using HTML tags. By using these tags appropriately, you can make your content more engaging and effective for your audience.</p>
 
-        </div>
+        </animated.div>
     )
 }
