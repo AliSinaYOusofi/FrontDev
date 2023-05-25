@@ -55,6 +55,7 @@ export default function Navbar() {
                 display: "hidden",
                 x: -100
             },
+            
             to: {
                 opacity: 1,
                 display: "block",
