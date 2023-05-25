@@ -3,27 +3,11 @@
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock'
 import {animated, useSpring} from '@react-spring/web';
+import useSlideAnimation from '@/hooks/useSlideAnimation';
 export default function Attributes() {
 
-    const [spring, api] = useSpring(
-        () => ({
-            from: { 
-                x: -100,
-                opacity: 0
-            },
-            to: { 
-                x: 0,
-                opacity: 1,
-            },
-            config: {
-                damping: 400,
-                clamp: true,
-                tension: 50,
-                friction: 10
-            }
-        }),
-        
-    )
+    const [spring, api] = useSlideAnimation();
+    
     return (
         <animated.div style={...spring} key={spring.key}>
             <h1 className="text-[1.5rem]">Introduction to HTML Attributes</h1>
