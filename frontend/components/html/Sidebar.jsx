@@ -1,7 +1,7 @@
 "use client";
 
 import { useSpring, animated } from "@react-spring/web";
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import Introduction from "./Introduction";
 import Basics from "./Basics";
 import Attributes from "./Attributes";
@@ -22,6 +22,16 @@ export default function Sidebar() {
         <Style />,
         <TextFormatting />,
     ];
+
+    const liArray = [
+        "Introduction",
+        "Basics",
+        "Attributes",
+        "Headings",
+        "Paragraphs",
+        "Style",
+        "Text Formatting"
+    ]
     
     const [spring, api] = useSpring(() => ({
         from: {
@@ -42,9 +52,15 @@ export default function Sidebar() {
         },
     }));
 
-    const [currentPage, setCurrentPage] = useState(1);
-    const totalPages = componentsArray.length;
+    const [currentPage, setCurrentPage] = useState(null);
+    const totalPages = componentsArray.length - 1;
 
+    useEffect( () => {
+        if (currentPage === null) {
+            setComponent(componentsArray[0]);
+            setCurrentPage(0);
+        }
+    }, [])
     const searchTopics = (event) => {
         const searchText = event.target.value.toLowerCase();
 
@@ -62,55 +78,30 @@ export default function Sidebar() {
     };
 
     const handleNextClick = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1);
-            setComponent(componentsArray[currentPage])
+        if (currentPage <= totalPages && currentPage >= 0) {
+            setComponent(componentsArray[currentPage + 1])
+            setCurrentPage(page => page + 1);
         }
-    };
 
-    useEffect( () => {
-        
-        setComponent(componentsArray[currentPage])
-        
-    }, [])
+        console.log("updatd the current page: ", currentPage);
+    };
 
     const handlePreviousClick = () => {
-
+        console.log("before going back: " + currentPage);
         if (currentPage > 1) {
-            setCurrentPage(currentPage - 1);
-            setComponent(componentsArray[currentPage])
+            setComponent(componentsArray[currentPage - 1])
+            setCurrentPage(page => page - 1);
         }
+
+        console.log("after going back", currentPage - 1);
     };
     
-    const menuItems = [
-        <li onClick={() => setComponent(<Introduction />)} className="">
-            Introduction
-        </li>,
-
-        <li onClick={() => setComponent(<Basics />)} className="">
-            Basics
-        </li>,
-
-        <li onClick={() => setComponent(<Attributes />)} className="">
-            Attributes
-        </li>,
-
-        <li onClick={() => setComponent(<Headings />)} className="">
-            Headings
-        </li>,
-
-        <li onClick={() => setComponent(<Paragraphs />)} className="">
-            Paragraphs
-        </li>,
-
-        <li onClick={() => setComponent(<Style />)} className="">
-            Style
-        </li>,
-
-        <li onClick={() => setComponent(<TextFormatting />)} className="">
-            Text Formatting
-        </li>,
-    ];
+    const handleMenuItemClick = (index) => {
+        setComponent(componentsArray[index]);
+        setCurrentPage(index);
+    }
+    
+    const menuItems = liArray.map( (li, index) => <li key={index} onClick={() => handleMenuItemClick(index)}>{li}</li> )
 
     return (
     <div className="mx-auto flex">
@@ -156,13 +147,13 @@ export default function Sidebar() {
 
         </animated.div>
         <div className="w-[80%] mx-auto mt-2 content_container">
-            {component}
+            { component}
             <div className="pagination-container mt-5 w-full flex justify-between items-center">
-                <button className="rounded-md bg-gray-100 hover:bg-gray-200 cursor-pointer px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handlePreviousClick} disabled={currentPage === 1}>
+                <button className="rounded-md bg-gray-100 hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handlePreviousClick} disabled={currentPage <= 0}>
                     Previous
                 </button>
                 
-                <button className="rounded-md bg-gray-100 hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handleNextClick} disabled={currentPage === totalPages}>
+                <button className="rounded-md bg-gray-100 hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handleNextClick} disabled={currentPage >= totalPages && currentPage >= 0}>
                     Next
                 </button>
             </div>
