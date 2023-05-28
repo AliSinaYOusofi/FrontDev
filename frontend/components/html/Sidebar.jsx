@@ -17,8 +17,21 @@ import Links from "./Links";
 import Images from "./Images";
 import Lists from "./Lists";
 import Tables from "./Tables";
+import SecondProject from "./SecondProject";
+import MetaTags from "./MetaTags";
+import Iframe from "./Iframe";
+import FormsIntroduction from "./FormsIntroduction";
+import FormAttributes from "./FormAttributes";
+import FormElements from "./FormElements";
+import InputTypes from "./InputTypes";
+import InputAttributes from "./InputAttributes";
+import Video from "./Video";
+import Audio from "./Audio";
+import FormProject from "./FormProject";
 
 export default function Sidebar() {
+
+    const [activeListItem, setActiveListItem] = useState(null);
     const [component, setComponent] = useState(null);
 
     const componentsArray = [
@@ -35,7 +48,18 @@ export default function Sidebar() {
         <Links />,
         <Images />,
         <Lists />,
-        <Tables />
+        <Tables />,
+        <SecondProject />,
+        <MetaTags />,
+        <Iframe />,
+        <FormsIntroduction />,
+        <FormAttributes />,
+        <FormElements />,
+        <InputTypes />,
+        <InputAttributes />,
+        <FormProject />,
+        <Video />,
+        <Audio />
     ];
 
     const liArray = [
@@ -52,10 +76,21 @@ export default function Sidebar() {
         "Hyperlinks",
         "Image",
         "Lists",
-        "Tables"
+        "Tables",
+        "Second Project",
+        "MetaTags",
+        "Iframe",
+        "Forms",
+        "Form Attributes",
+        "Form Elements",
+        "Input Types",
+        "Input Attributes",
+        "Form Project",
+        "Video",
+        "Audio"
     ]
     
-    const [spring, api] = useSlideAnimation();
+    const [spring] = useSlideAnimation();
 
     const [currentPage, setCurrentPage] = useState(null);
     const totalPages = componentsArray.length - 1;
@@ -106,7 +141,17 @@ export default function Sidebar() {
         setCurrentPage(index);
     }
     
-    const menuItems = liArray.map( (li, index) => <li key={index} onClick={() => handleMenuItemClick(index)}>{li}</li> )
+    const menuItems = liArray.map( (li, index) => 
+        <li 
+            className={activeListItem === index ? "active-list-item" : null} 
+            key={index} 
+            onClick={() => {
+                handleMenuItemClick(index);
+                setActiveListItem(index);
+            }}>
+            {li}
+        </li> 
+    )
 
     return (
     <div className="mx-auto flex">

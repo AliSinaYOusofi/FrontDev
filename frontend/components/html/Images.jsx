@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock'
 import useSlideAnimation from '@/hooks/useSlideAnimation';

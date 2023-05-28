@@ -1,5 +1,4 @@
-"use client";
-import {animated, useSpring} from '@react-spring/web';
+import {animated} from '@react-spring/web';
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock';
 import useSlideAnimation from '@/hooks/useSlideAnimation';
