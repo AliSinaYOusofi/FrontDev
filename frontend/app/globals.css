@@ -7,6 +7,10 @@
     @apply block p-1 md:p-0 text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl mt-10;
 }
 
+.content_container h2 {
+    @apply block p-1 md:p-0 text-2xl font-medium text-gray-700 sm:text-3xl md:text-4xl mt-8 mb-4;
+}
+
 .content_container p, .content_container ul, .content_container li {
     @apply text-xl text-gray-700 tracking-tighter mt-5;
     font-family: 'Roboto Mono', sans-serif;
@@ -50,4 +54,8 @@
 
 .nested ul {
     list-style-type: disc;
+}
+
+.active-list-item {
+    background-color: #f4f4f5;
 }

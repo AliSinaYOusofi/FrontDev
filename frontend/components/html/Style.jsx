@@ -1,4 +1,3 @@
-"use client";
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock'
 import { animated, useSpring } from '@react-spring/web';

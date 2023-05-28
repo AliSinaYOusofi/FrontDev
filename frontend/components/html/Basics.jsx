@@ -1,13 +1,11 @@
-"use client";
-
 import React from 'react'
-import {animated, useSpring} from '@react-spring/web';
+import {animated} from '@react-spring/web';
 import CodeBlock from '../Code Block/CodeBlock';
 import useSlideAnimation from '@/hooks/useSlideAnimation';
 
 export default function Basics() {
     
-    const [lessonsSprings, lessonAPI] = useSlideAnimation();
+    const [lessonsSprings] = useSlideAnimation();
 
     return (
         <animated.div className="basics" key={lessonsSprings.key} style={...lessonsSprings}>

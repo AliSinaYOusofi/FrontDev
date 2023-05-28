@@ -1,9 +1,8 @@
-"use client";
-
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock'
 import {animated, useSpring} from '@react-spring/web';
 import useSlideAnimation from '@/hooks/useSlideAnimation';
+
 export default function Attributes() {
 
     const [spring, api] = useSlideAnimation();

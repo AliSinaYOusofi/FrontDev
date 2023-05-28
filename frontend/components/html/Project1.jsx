@@ -1,9 +1,8 @@
-"use client";
-
 import React from 'react'
 import CodeBlock from '../Code Block/CodeBlock'
 import useSlideAnimation from '@/hooks/useSlideAnimation'
 import { animated } from '@react-spring/web';
+
 export default function Project1() {
 
     const [spring] = useSlideAnimation();
@@ -12,7 +11,7 @@ export default function Project1() {
         <animated.div style={spring} key={spring.key}>
             <h1> Introduction </h1>
             <p>
-            This is a simple HTML project that demonstrates the use of various attributes and tags which we have learned.
+                This is a simple HTML project that demonstrates the use of various attributes and tags which we have learned.
             </p>
 
             <h1 className="mt-10"> Code </h1>
