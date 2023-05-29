@@ -59,3 +59,48 @@
 .active-list-item {
     background-color: #f4f4f5;
 }
+
+details {
+    
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(226, 226, 232, 0.05) 0px 8px 16px;
+    padding: 10px;
+    transition: max-height 0.5s ease;
+}
+summary {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px; /* add padding for the width of the closed icon */
+    list-style: none;
+    border-radius: 20px;
+}
+  
+details[open] > summary::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px; /* add spacing between icon and text */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" %3E%3Cpath stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" /%3E%3C/svg%3E');
+    position: absolute;
+    left: 0.4em;
+  }
+  
+details > summary::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" %3E%3Cpath stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /%3E%3C/svg%3E');
+    position: absolute;
+    left: 0.4em;
+}

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { animated } from '@react-spring/web';
 import { useSpring } from '@react-spring/web';
 import Link from 'next/link';
+import Hamburger from 'hamburger-react'
 
 export default function Navbar() {
 
@@ -81,7 +82,7 @@ export default function Navbar() {
         </li>
 
         <li>
-            <Link className="text-gray-500 transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/">
+            <Link className="text-gray-500 transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/css">
                 CSS3
                 <svg
                 viewBox="0 0 32 32"
@@ -164,7 +165,7 @@ export default function Navbar() {
                             </li>
 
                             <li>
-                                <Link className="text-gray-500 transition hover:text-gray-500/75" href="/">
+                                <Link className="text-gray-500 transition hover:text-gray-500/75" href="/css">
                                 CSS3
                                 </Link>
                             </li>
@@ -207,24 +208,10 @@ export default function Navbar() {
                         </div>
 
                         <button
-                        className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-                        onClick={handleClickOnBurgerMenu}>
-                        
-                            <span class="sr-only" >Toggle menu</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                            >
-                                <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
+                            className="block rounded-md bg-white/10 md:hidden"
+                            onClick={handleClickOnBurgerMenu}>
+                    
+                            <Hamburger size={20}/>
                         </button>
                     </div>
                 </div>

@@ -1,35 +1,13 @@
 "use client";
 
-import { animated } from "@react-spring/web";
-import React, {useEffect, useState } from "react";
-import Introduction from "./Introduction";
-import Basics from "./Basics";
-import Attributes from "./Attributes";
-import Headings from "./Headings";
-import Paragraphs from "./Paragraphs";
-import Style from "./Style";
-import TextFormatting from "./TextFormatting";
-import useSlideAnimation from "@/hooks/useSlideAnimation";
-import Quotation from "./Quotation";
-import Comments from "./Comments";
-import Project1 from "./Project1";
-import Links from "./Links";
-import Images from "./Images";
-import Lists from "./Lists";
-import Tables from "./Tables";
-import SecondProject from "./SecondProject";
-import MetaTags from "./MetaTags";
-import Iframe from "./Iframe";
-import FormsIntroduction from "./FormsIntroduction";
-import FormAttributes from "./FormAttributes";
-import FormElements from "./FormElements";
-import InputTypes from "./InputTypes";
-import InputAttributes from "./InputAttributes";
-import Video from "./Video";
-import Audio from "./Audio";
-import FormProject from "./FormProject";
-import Semantics from "./Semantics";
 
+import React, {useEffect, useState } from "react";
+
+
+import Introduction from "./topics/Introduction";
+import CSSSyntax from "./topics/CSSSyntax";
+import useSlideAnimation from "@/hooks/useSlideAnimation";
+import { animated } from "@react-spring/web";
 
 export default function Sidebar() {
 
@@ -39,60 +17,12 @@ export default function Sidebar() {
 
     const componentsArray = [
         <Introduction />,
-        <Basics />,
-        <Attributes />,
-        <Headings />,
-        <Paragraphs />,
-        <Style />,
-        <TextFormatting />,
-        <Quotation />,
-        <Comments />,
-        <Project1 />,
-        <Links />,
-        <Images />,
-        <Lists />,
-        <Tables />,
-        <SecondProject />,
-        <MetaTags />,
-        <Iframe />,
-        <FormsIntroduction />,
-        <FormAttributes />,
-        <FormElements />,
-        <InputTypes />,
-        <InputAttributes />,
-        <FormProject />,
-        <Video />,
-        <Audio />,
-        <Semantics />
+        <CSSSyntax />
     ];
 
     const liArray = [
         "Introduction",
-        "Basics",
-        "Attributes",
-        "Headings",
-        "Paragraphs",
-        "Style",
-        "Text Formatting",
-        "Quotation",
-        "Comments",
-        "First Project",
-        "Hyperlinks",
-        "Image",
-        "Lists",
-        "Tables",
-        "Second Project",
-        "MetaTags",
-        "Iframe",
-        "Forms",
-        "Form Attributes",
-        "Form Elements",
-        "Input Types",
-        "Input Attributes",
-        "Form Project",
-        "Video",
-        "Audio",
-        "Semantic elements"
+        "CSS Syntax"
     ]
     
     const [spring] = useSlideAnimation();
@@ -104,7 +34,9 @@ export default function Sidebar() {
         if (currentPage === null) {
             setComponent(componentsArray[0]);
             setCurrentPage(0);
+            setActiveListItem(0);
         }
+        
     }, [])
     const searchTopics = (event) => {
         const searchText = event.target.value.toLowerCase();
@@ -132,11 +64,12 @@ export default function Sidebar() {
     };
 
     const handlePreviousClick = () => {
-        console.log("before going back: " + currentPage);
-        if (currentPage > 1) {
+
+        if (currentPage >= 1) {
             setComponent(componentsArray[currentPage - 1])
             setCurrentPage(page => page - 1);
         }
+
         setActiveListItem(currentPage - 1);
     };
     
@@ -214,7 +147,7 @@ export default function Sidebar() {
 
         </animated.div>
 
-        <div className="w-full md:w-[80%] mx-auto mt-2 content_container">
+        <div  className="w-full md:w-[80%] mx-auto mt-2 content_container">
             <div className="md:p-0 px-4">
                 { component}
             </div>
