@@ -5,7 +5,7 @@ import 'prism-themes/themes/prism-atom-dark.css';
 import React, { useEffect, useState } from 'react'
 import CodeEditor from '../Code/CodeEditor';
 
-export default function CodeBlock({code, language, showCodeEditor}) {
+export default function CodeBlock({code, language, showCodeEditor, onlyCode}) {
     
     const [clipboard, setClipboard] = useState(false);
 
@@ -22,6 +22,18 @@ export default function CodeBlock({code, language, showCodeEditor}) {
         }, 2000);
         
         navigator.clipboard.writeText(code);
+    }
+
+    if (onlyCode) {
+        return (
+            <div className="relative mt-5">
+                <pre className="">
+                    <code className={`rounded-md p-3 mr-10 language-${language}`}>
+                        {code}
+                    </code>
+                </pre>
+            </div>
+        )
     }
 
     return (

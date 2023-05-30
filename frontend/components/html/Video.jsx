@@ -10,7 +10,7 @@ export default function Video() {
     return (
         <animated.div key={lessonsSprings.key} style={...lessonsSprings}>
 
-            <h1> Video </h1>
+            <h1> HTML Video tag </h1>
             <p>
                 The HTML {"<video>"} tag is used to embed videos into a webpage. It provides a standard and easy way to embed videos, and it is supported by most modern web browsers.
             </p>
