@@ -4,15 +4,15 @@
 @tailwind utilities;
 
 .content_container h1 {
-    @apply block p-1 md:p-0 text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl mt-10;
+    @apply block p-1 md:p-0 text-3xl font-bold  sm:text-4xl md:text-5xl mt-10;
 }
 
 .content_container h2 {
-    @apply block p-1 md:p-0 text-2xl font-medium text-gray-700 sm:text-3xl md:text-4xl mt-8 mb-4;
+    @apply block p-1 md:p-0 text-2xl font-medium  sm:text-3xl md:text-4xl mt-8 mb-4;
 }
 
 .content_container p, .content_container ul, .content_container li {
-    @apply text-xl text-gray-700 tracking-tighter mt-5;
+    @apply text-xl  tracking-tighter mt-5;
     font-family: 'Roboto Mono', sans-serif;
 }
 
@@ -29,12 +29,9 @@
     border-radius: 0.375rem;
     padding: 0.5rem;
     width: 100%;
-}
-
-.sidebar_li li:hover {
-    background-color: #f4f4f5;
     cursor: pointer;
 }
+
 
 .lists ul, .o_lists ol, .nested ol, .nested ul{
     margin-left: 20px;

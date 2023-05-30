@@ -2,7 +2,6 @@ import CodeBlock from '@/components/Code Block/CodeBlock'
 import React from 'react'
 import { animated } from "@react-spring/web";
 import useSlideAnimation from "@/hooks/useSlideAnimation";
-import { getServerSideProps } from 'next/app';
 
 export default function CSSSyntax() {
 

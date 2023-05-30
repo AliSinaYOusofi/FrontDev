@@ -1,14 +1,20 @@
+"use client";
+
 import Navbar from '@/components/Navbar/Navbar'
 import HeroSection from '@/components/HeroSection/HeroSection'
 import InfoContainer from '@/components/GlobalTechInfo/InfoContainer'
 import About from '@/components/AboutUs/About'
 import Footer from '@/components/Footer/Footer'
+import { useNextContext } from '@/context/NextContext';
+import { darkThemeSetup, lightThemeSetup } from '@/utils/themseAndFont';
 
 export default function Home() {
   
+  const {theme} = useNextContext();
+
   return (
-    <main className="">
-       <Navbar />
+    <main className={`${theme ? darkThemeSetup : lightThemeSetup}`}>
+        <Navbar />
         <HeroSection />
         <InfoContainer />
         <About />
