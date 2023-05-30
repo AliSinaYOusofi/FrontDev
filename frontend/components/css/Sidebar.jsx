@@ -8,12 +8,15 @@ import Introduction from "./topics/Introduction";
 import CSSSyntax from "./topics/CSSSyntax";
 import useSlideAnimation from "@/hooks/useSlideAnimation";
 import { animated } from "@react-spring/web";
+import { useNextContext } from "@/context/NextContext";
 
 export default function Sidebar() {
 
     const [activeListItem, setActiveListItem] = useState(null);
     const [component, setComponent] = useState(null);
     const [selectedTopic, setSelectedTopic] = useState(null);
+
+    const {theme} = useNextContext();
 
     const componentsArray = [
         <Introduction />,
@@ -80,7 +83,7 @@ export default function Sidebar() {
     
     const menuItems = liArray.map( (li, index) => 
         <li 
-            className={activeListItem === index ? "active-list-item" : null} 
+            className={`${activeListItem === index ? "active-list-item" : null} hover:${theme ? "bg-gray-950" : "bg-gray-100"}`} 
             key={index} 
             onClick={() => {
                 handleMenuItemClick(index);
@@ -153,11 +156,11 @@ export default function Sidebar() {
             </div>
 
             <div className="pagination-container mt-5 w-full flex flex-row md:py-2 md:px-0 py-5 px-4 md:flex-row justify-between items-center">
-                <button className="rounded-md bg-gray-100 hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handlePreviousClick} disabled={currentPage <= 0}>
+                <button className="rounded-md  hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handlePreviousClick} disabled={currentPage <= 0}>
                     Previous
                 </button>
 
-                <button className="rounded-md bg-gray-100 hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handleNextClick} disabled={currentPage >= totalPages && currentPage >= 0}>
+                <button className="rounded-md  hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handleNextClick} disabled={currentPage >= totalPages && currentPage >= 0}>
                     Next
                 </button>
             </div>

@@ -29,6 +29,7 @@ import Video from "./Video";
 import Audio from "./Audio";
 import FormProject from "./FormProject";
 import Semantics from "./Semantics";
+import { useNextContext } from "@/context/NextContext";
 
 
 export default function Sidebar() {
@@ -36,6 +37,8 @@ export default function Sidebar() {
     const [activeListItem, setActiveListItem] = useState(null);
     const [component, setComponent] = useState(null);
     const [selectedTopic, setSelectedTopic] = useState(null);
+
+    const {theme} = useNextContext();
 
     const componentsArray = [
         <Introduction />,
@@ -112,13 +115,13 @@ export default function Sidebar() {
         const lis = document.querySelectorAll("li");
 
         lis.forEach((li) => {
-        const text = li.textContent.toLowerCase();
+            const text = li.textContent.toLowerCase();
 
-        if (text.includes(searchText)) {
-            li.style.display = "block";
-        } else {
-            li.style.display = "none";
-        }
+            if (text.includes(searchText)) {
+                li.style.display = "block";
+            } else {
+                li.style.display = "none";
+            }
         });
     };
 
@@ -132,7 +135,6 @@ export default function Sidebar() {
     };
 
     const handlePreviousClick = () => {
-        console.log("before going back: " + currentPage);
         if (currentPage > 1) {
             setComponent(componentsArray[currentPage - 1])
             setCurrentPage(page => page - 1);
@@ -147,7 +149,7 @@ export default function Sidebar() {
     
     const menuItems = liArray.map( (li, index) => 
         <li 
-            className={activeListItem === index ? "active-list-item" : null} 
+            className={`${activeListItem === index  ? theme ? "bg-gray-800": "bg-gray-100" : ""} ${theme ? "hover:bg-gray-800" : "hover:bg-gray-100"}`} 
             key={index} 
             onClick={() => {
                 handleMenuItemClick(index);
@@ -163,14 +165,14 @@ export default function Sidebar() {
         <animated.div
             style={{ ...spring }}
             key={spring.key}
-            className="bg-white"
+            className=""
         >
             <form className="w-full md:w-fit">
                 <div className="relative  md:px-4  px-4 py-2">
                     <div className="absolute  inset-y-0 left-2 flex items-center pl-3 pointer-events-none">
                         <svg
                             aria-hidden="true"
-                            className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                            className="w-5 h-5  "
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -188,7 +190,7 @@ export default function Sidebar() {
                     <input
                         type="search"
                         id="default-search"
-                        className="block py-2  text-xs md:text-sm p-2 rounded-sm outline-none pl-10 text-gray-900 border w-full md:w-auto"
+                        className="block py-2  text-xs md:text-sm p-2 rounded-sm outline-none pl-10  border w-full md:w-auto"
                         placeholder="Search topics"
                         required
                         onChange={searchTopics}
@@ -208,7 +210,7 @@ export default function Sidebar() {
                 </details>
             </div>
 
-            <ul className="sidebar_li hidden md:block w-full md:px-4 px-1 text-xs md:text-base overflow-scroll h-[70%] sticky list-inside text-gray-700 ">
+            <ul className="sidebar_li hidden md:block w-full md:px-4 px-1 text-xs md:text-base overflow-scroll h-[70%] sticky list-inside ">
                 {menuItems}
             </ul>
 
@@ -220,11 +222,11 @@ export default function Sidebar() {
             </div>
 
             <div className="pagination-container mt-5 w-full flex flex-row md:py-2 md:px-0 py-5 px-4 md:flex-row justify-between items-center">
-                <button className="rounded-md bg-gray-100 hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handlePreviousClick} disabled={currentPage <= 0}>
+                <button className="rounded-md  hover:bg-gray-200 px-5 py-2.5 text-sm font-medium  transition hover:text-black " onClick={handlePreviousClick} disabled={currentPage <= 0}>
                     Previous
                 </button>
 
-                <button className="rounded-md bg-gray-100 hover:bg-gray-200 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black " onClick={handleNextClick} disabled={currentPage >= totalPages && currentPage >= 0}>
+                <button className="rounded-md  hover:bg-gray-200 px-5 py-2.5 text-sm font-medium  transition hover:text-black " onClick={handleNextClick} disabled={currentPage >= totalPages && currentPage >= 0}>
                     Next
                 </button>
             </div>

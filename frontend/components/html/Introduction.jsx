@@ -9,7 +9,7 @@ export default function Introduction() {
     return (
         <animated.div key={spring.key} style={...spring} className="introduction_container">
             <div>
-                <h1 className="content_header block  p-1 md:p-0 text-3xl font-bold  text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">Introduction to HTML</h1>
+                <h1 className="content_header block  p-1 md:p-0 text-3xl font-bold  sm:text-4xl md:text-5xl lg:text-6xl">Introduction to HTML</h1>
                 <p className="mt-2 paragraph">
                     HTML, or HyperText Markup Language, is a computer language that's 
                     used to create and structure content on the internet. It's the backbone of 

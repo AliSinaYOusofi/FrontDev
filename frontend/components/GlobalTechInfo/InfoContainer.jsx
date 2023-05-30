@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react'
 import TechInfo from './TechInfo'
 import { useInView, animated } from '@react-spring/web'
@@ -100,7 +98,7 @@ export default function InfoContainer() {
 
     return (
         <>
-            <animated.h1 id="info" ref={ref} style={springs} className="text-4xl text-center font-extrabold mb-10 mt-5 text-gray-600"> Learn Step by Step</animated.h1>
+            <animated.h1 id="info" ref={ref} style={springs} className="text-4xl text-center font-extrabold mb-10 mt-5 "> Learn Step by Step</animated.h1>
             
             <animated.div ref={containerRef} style={sprintValues} className=" w-[90%] flex-wrap items-start justify-start px-2 flex md:flex-row flex-col mx-auto gap-x-2">
                 <div>
