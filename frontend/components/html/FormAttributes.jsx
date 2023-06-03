@@ -21,15 +21,15 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-    <form action="#" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+<form action="#" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
 
-        <input type="submit" value="Submit">
-    </form>
+    <input type="submit" value="Submit">
+</form>
             `}
             language="html"
             showCodeEditor={true}
@@ -53,13 +53,13 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-    <form action="/form-handler.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <br><br>
-        <input type="submit" value="Submit" formaction="/submit-handler.php">
-        <input type="submit" value="Save as Draft" formaction="/draft-handler.php">
-    </form>
+<form action="/form-handler.php" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <br><br>
+    <input type="submit" value="Submit" formaction="/submit-handler.php">
+    <input type="submit" value="Save as Draft" formaction="/draft-handler.php">
+</form>
             `}
             language="html"
             showCodeEditor={true}
@@ -94,9 +94,9 @@ export default function FormAttributes() {
                 The name attribute specifies the unique name of the input field. The values of the input fields are sent in the form of key-value pairs, and the names of the input fields are the keys.
             </p>
             <CodeBlock code={`
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name">
-            `}
+<label for="name">Name</label>
+<input type="text" name="name" id="name">
+        `}
             language="html"
             showCodeEditor={true}
             />
@@ -107,8 +107,8 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="location">Location</label>
-    <input type="text" name="location" id="location" required>
+<label for="location">Location</label>
+<input type="text" name="location" id="location" required>
             `}
             language="html"
             showCodeEditor={true}
@@ -120,8 +120,8 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" placeholder="name@example.com">
+<label for="email">Email</label>
+<input type="email" name="email" id="email" placeholder="name@example.com">
             `}
             language="html"
             showCodeEditor={true}
@@ -133,11 +133,11 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="gender">Gender</label>
-    <input type="radio" name="gender" id="male" value="male">
-    <label for="male">Male</label>
-    <input type="radio" name="gender" id="female" value="female">
-    <label for="female">Female</label>`
+<label for="gender">Gender</label>
+<input type="radio" name="gender" id="male" value="male">
+<label for="male">Male</label>
+<input type="radio" name="gender" id="female" value="female">
+<label for="female">Female</label>`
             }
             language="html"
             showCodeEditor={true}
@@ -149,8 +149,8 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" disabled>
+<label for="email">Email</label>
+<input type="email" name="email" id="email" disabled>
             `}
             language="html"
             showCodeEditor={true}
@@ -162,8 +162,8 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="date">Date</label>
-    <input type="text" id="date" name="date" value="2022-01-01" readonly>
+<label for="date">Date</label>
+<input type="text" id="date" name="date" value="2022-01-01" readonly>
             `}
             language="html"
             showCodeEditor={true}

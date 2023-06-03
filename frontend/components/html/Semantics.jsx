@@ -28,16 +28,16 @@ export default function Semantics() {
             </p>
             <CodeBlock
             code={`
-    <header>
-        <img src="logo.png" alt="My Website">
-        <nav>
-            <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <img src="logo.png" alt="My Website">
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
             `}
             language="html"
             showCodeEditor={true}
@@ -49,10 +49,10 @@ export default function Semantics() {
             </p>
             <CodeBlock
             code={`
-    <footer>
-        <p>© 2021 My Website. All Rights Reserved.</p>
-        <p>123 Main St, Anytown USA 12345</p>
-    </footer>
+<footer>
+    <p>© 2021 My Website. All Rights Reserved.</p>
+    <p>123 Main St, Anytown USA 12345</p>
+</footer>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -64,13 +64,13 @@ export default function Semantics() {
             </p>
             <CodeBlock
             code={`
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -80,10 +80,10 @@ export default function Semantics() {
             <p>The {"<main>"} element defines the main content area of the web page. This element is used to provide a clear separation between the primary content and other sections, such as the header or footer. Here is an example:</p>
             <CodeBlock
             code={`
-    <main>
-        <h1>Welcome to My Website</h1>
-        <p> Lorem ipsum dolor sit amet...</p>
-    </main>
+<main>
+    <h1>Welcome to My Website</h1>
+    <p> Lorem ipsum dolor sit amet...</p>
+</main>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -95,10 +95,10 @@ export default function Semantics() {
             </p>
             <CodeBlock
             code={`
-    <article>
-        <h2>How to Build a Website with HTML and CSS</h2>
-        <p> In this post, we will go through the...</p>
-    </article>
+<article>
+    <h2>How to Build a Website with HTML and CSS</h2>
+    <p> In this post, we will go through the...</p>
+</article>
             `}
             language="html"
             showCodeEditor={true}
@@ -110,10 +110,10 @@ export default function Semantics() {
             </p>
             <CodeBlock
             code={`
-    <section>
-        <h2>Our Services</h2>
-        <p> We offer the following services...</p>
-    </section>
+<section>
+    <h2>Our Services</h2>
+    <p> We offer the following services...</p>
+</section>
             `}
             language="html"
             showCodeEditor={true}

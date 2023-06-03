@@ -169,7 +169,7 @@ export default function Sidebar() {
         >
             <form className="w-full md:w-fit">
                 <div className="relative  md:px-4  px-4 py-2">
-                    <div className="absolute  inset-y-0 left-2 flex items-center pl-3 pointer-events-none">
+                    <div className={`text-black pl-6 absolute inset-y-0 left-0 flex items-center  pointer-events-none`}>
                         <svg
                             aria-hidden="true"
                             className="w-5 h-5  "
@@ -210,7 +210,7 @@ export default function Sidebar() {
                 </details>
             </div>
 
-            <ul className="sidebar_li hidden md:block w-full md:px-4 px-1 text-xs md:text-base overflow-scroll h-[70%] sticky list-inside ">
+            <ul className="sidebar_li hidden md:block w-full md:px-4 px-1 text-xs md:text-base overflow-scroll scrollbar-hide h-[70%] sticky list-inside ">
                 {menuItems}
             </ul>
 

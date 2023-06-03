@@ -20,15 +20,15 @@ export default function Paragraphs() {
             </p>
             <CodeBlock
             code={`
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>My First Web Page</title>
-        </head>
-        <body>
-            <p>Hello, world!</p>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Web Page</title>
+    </head>
+    <body>
+        <p>Hello, world!</p>
+    </body>
+</html>
             `}
             language="html"
             showCodeEditor={true}
@@ -42,17 +42,17 @@ export default function Paragraphs() {
 
             <CodeBlock
             code={`
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>My Second Web Page</title>
-        </head>
-        <body>
-            <p>This is the first paragraph.</p>
-            <p>This is the second paragraph.</p>
-            <p>This is the third paragraph.</p>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Second Web Page</title>
+    </head>
+    <body>
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+        <p>This is the third paragraph.</p>
+    </body>
+</html>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -67,19 +67,19 @@ export default function Paragraphs() {
             </p>
             <CodeBlock
             code={`
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>My Third Web Page</title>
-        </head>
-        <body>
-            <pre>
-            This is some
-            preformatted
-            text.
-            </pre>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Third Web Page</title>
+    </head>
+    <body>
+        <pre>
+        This is some
+        preformatted
+        text.
+        </pre>
+    </body>
+</html>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -91,17 +91,17 @@ export default function Paragraphs() {
         </p>
         <CodeBlock
         code={`
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>My Fourth Web Page</title>
-        </head>
-        <body>
-            <p>This is the first paragraph.</p>
-            <hr />
-            <p>This is the second paragraph.</p>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Fourth Web Page</title>
+    </head>
+    <body>
+        <p>This is the first paragraph.</p>
+        <hr />
+        <p>This is the second paragraph.</p>
+    </body>
+</html>
         `}
         language="html"
         showCodeEditor={true}
@@ -114,24 +114,22 @@ export default function Paragraphs() {
         <CodeBlock
         code={
             `
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>My Fifth Web Page</title>
-        </head>
-        <body>
-            <p>This is the first paragraph.</p>
-            <br />
-            <p>This is the second paragraph.</p>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Fifth Web Page</title>
+    </head>
+    <body>
+        <p>This is the first paragraph.</p>
+        <br />
+        <p>This is the second paragraph.</p>
+    </body>
+</html>
             `
         }
         language="html"
         showCodeEditor={true}
         />
-        
-
         <h1 className="mt-10 text-[1.5rem]">Conclusion</h1>
         <p className="mt-2">
             In summary, HTML paragraphs are an essential part of web design and allow us to display text in a clear and readable format. By using the {"<p>"} tag, we can create paragraphs of any length and style them as needed. In addition, we can use other HTML tags like {"<pre />"} and {"<hr />"} to display text in different ways and separate content on the page. With some knowledge of HTML and CSS, we can create beautiful and effective web pages that communicate our message to the world.

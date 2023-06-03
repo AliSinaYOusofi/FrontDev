@@ -4,7 +4,7 @@ import { animated, useSpring } from '@react-spring/web';
 import useSlideAnimation from '@/hooks/useSlideAnimation';
 export default function Style() {
 
-    const [spring, api] = useSlideAnimation();
+    const [spring] = useSlideAnimation();
 
     return (
         <animated.div style={...spring} key={spring.key}>

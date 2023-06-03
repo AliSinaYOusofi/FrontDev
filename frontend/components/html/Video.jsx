@@ -25,10 +25,10 @@ export default function Video() {
             </p>
             <CodeBlock
             code={`
-        <video width="320" height="240" controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video width="320" height="240" controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -68,10 +68,10 @@ export default function Video() {
             </p>
             <CodeBlock
             code={`
-        <video width="320" height="240" controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video width="320" height="240" controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -81,10 +81,10 @@ export default function Video() {
             <p> The controls attribute adds the default video player controls to your video player. These include a play/pause button, a volume slider, a mute button, and more</p>
             <CodeBlock
             code={`
-        <video  controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video  controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -94,10 +94,10 @@ export default function Video() {
             <p>The autoplay attribute allows the video to start playing automatically when the page loads.</p>
             <CodeBlock
             code={`
-        <video  autoplay controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video  autoplay controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -109,10 +109,10 @@ export default function Video() {
             </p>
             <CodeBlock
             code={`
-        <video  loop controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video  loop controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -122,10 +122,10 @@ export default function Video() {
             <p>The muted attribute causes the video to play without sound</p>
             <CodeBlock
             code={`
-        <video  muted controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video  muted controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -135,10 +135,10 @@ export default function Video() {
             <p>The poster attribute specifies a URL for an image to display before the video starts playing.</p>
             <CodeBlock
             code={`
-        <video  poster="https://i.vimeocdn.com/video/91088794_640.jpg" controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video  poster="https://i.vimeocdn.com/video/91088794_640.jpg" controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -151,10 +151,10 @@ export default function Video() {
             </p>
             <CodeBlock
             code={`
-        <video  preload="auto" controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video  preload="auto" controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
@@ -164,10 +164,10 @@ export default function Video() {
             <p>The type attribute is used to specify the MIME type of the video file. For example, if you’re using an MP4 video file, you would specify type="video/mp4".</p>
             <CodeBlock
             code={`
-        <video  preload="auto" controls>
-            <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<video  preload="auto" controls>
+    <source src="https://player.vimeo.com/external/210743787.sd.mp4?s=10598b1cf88b588008b94a85d9bfc4f0773a82f7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             `}
             language="html"
             showCodeEditor={true}
