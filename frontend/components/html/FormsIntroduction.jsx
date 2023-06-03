@@ -33,9 +33,9 @@ export default function FormsIntroduction() {
                 To create a form container, we use the {"<form>"} tag, as shown below:
             </p>
             <CodeBlock code={`
-    <form>
-        <!-- Form components go here -->
-    </form>`}
+<form>
+    <!-- Form components go here -->
+</form>`}
             language={"html"}
             showCodeEditor={false}
             />
@@ -66,8 +66,8 @@ export default function FormsIntroduction() {
             </p>
             <CodeBlock
             code={`
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" />
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" />
             `}
             language={"html"}
             showCodeEditor={true}
@@ -79,8 +79,8 @@ export default function FormsIntroduction() {
             </p>
             <CodeBlock
             code={`
-        <button type="submit">Submit</button>
-        <input type="text" value="Reset Form" />
+<button type="submit">Submit</button>
+<input type="text" value="Reset Form" />
             `}
             language="html"
             showCodeEditor={true}

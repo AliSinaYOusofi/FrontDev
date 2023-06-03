@@ -29,12 +29,12 @@ export default function Headings() {
             <p className="mt-2"> Here is how you can use HTML headings:</p>
             <CodeBlock
                 code={`
-    <h1>This is heading level 1</h1>
-    <h2>This is heading level 2</h2>
-    <h3>This is heading level 3</h3>
-    <h4>This is heading level 4</h4>
-    <h5>This is heading level 5</h5>
-    <h6>This is heading level 6</h6>`
+<h1>This is heading level 1</h1>
+<h2>This is heading level 2</h2>
+<h3>This is heading level 3</h3>
+<h4>This is heading level 4</h4>
+<h5>This is heading level 5</h5>
+<h6>This is heading level 6</h6>`
                 }
                 language={"html"}
                 showCodeEditor={true}
@@ -48,29 +48,29 @@ export default function Headings() {
                 
             <CodeBlock
             code={`
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>HTML Headings Example</title>
-        </head>
-        <body>
-            <h1>My Blog</h1>
-            
-            <h2>About Me</h2>
-            <p>Hello, my name is John and I am a web developer.</p>
-            
-            <h2>My Latest Posts</h2>
-            
-            <h3>Post 1</h3>
-            <p>This is my first blog post.</p>
-            
-            <h3>Post 2</h3>
-            <p>This is my second blog post.</p>
-            
-            <h2>Contact Me</h2>
-            <p>Email: john@example.com<br>Phone: 123-456-7890</p>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Headings Example</title>
+    </head>
+    <body>
+        <h1>My Blog</h1>
+        
+        <h2>About Me</h2>
+        <p>Hello, my name is John and I am a web developer.</p>
+        
+        <h2>My Latest Posts</h2>
+        
+        <h3>Post 1</h3>
+        <p>This is my first blog post.</p>
+        
+        <h3>Post 2</h3>
+        <p>This is my second blog post.</p>
+        
+        <h2>Contact Me</h2>
+        <p>Email: john@example.com<br>Phone: 123-456-7890</p>
+    </body>
+</html>
     `}
     language={"html"}
     showCodeEditor={true}

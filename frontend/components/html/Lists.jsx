@@ -23,11 +23,11 @@ export default function Lists() {
 
             <CodeBlock
             code={`
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
             `}
                 language="html"
                 showCodeEditor={true}
@@ -46,11 +46,11 @@ export default function Lists() {
 
             <CodeBlock
             code={`
-    <ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ol>
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -63,14 +63,14 @@ export default function Lists() {
             </p>
             <CodeBlock
             code={`
-    <dl>
-        <dt>Term 1</dt>
-            <dd>Description 1</dd>
-        <dt>Term 2</dt>
-            <dd>Description 2</dd>
-        <dt>Term 3</dt>
-            <dd>Description 3</dd>
-    </dl>
+<dl>
+    <dt>Term 1</dt>
+        <dd>Description 1</dd>
+    <dt>Term 2</dt>
+        <dd>Description 2</dd>
+    <dt>Term 3</dt>
+        <dd>Description 3</dd>
+</dl>
             `}
             language="html"
             showCodeEditor={true}
@@ -87,18 +87,18 @@ export default function Lists() {
 
             <CodeBlock
             code={`
-    <ol>
-        <li>Item 1</li>
-        
-        <li>Item 2
-            <ul>
-            <li>Sub-Item 1</li>
-            <li>Sub-Item 2</li>
-            </ul>
-        </li>
+<ol>
+    <li>Item 1</li>
+    
+    <li>Item 2
+        <ul>
+        <li>Sub-Item 1</li>
+        <li>Sub-Item 2</li>
+        </ul>
+    </li>
 
-        <li>Item 3</li>
-    </ol>
+    <li>Item 3</li>
+</ol>
             `}
             language={"html"}
             showCodeEditor={true}

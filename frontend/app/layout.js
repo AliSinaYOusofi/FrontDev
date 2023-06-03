@@ -2,6 +2,8 @@ import React from 'react'
 import './globals.css'
 import 'prismjs/themes/prism-tomorrow.css';
 import NextContextProvider, { useNextContext } from '@/context/NextContext';
+import "@uiw/codemirror-theme-abcdef"
+
 
 export const metadata = {
   title: 'Learn front-end',

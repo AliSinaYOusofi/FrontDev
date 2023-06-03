@@ -20,16 +20,16 @@ export default function Tables() {
             </p>
             <CodeBlock
             code={`
-    <table>
-        <tr>
-            <td>Row 1, Column 1</td>
-            <td>Row 1, Column 2</td>
-        </tr>
-        <tr>
-            <td>Row 2, Column 1</td>
-            <td>Row 2, Column 2</td>
-        </tr>
-    </table>`}
+<table>
+    <tr>
+        <td>Row 1, Column 1</td>
+        <td>Row 1, Column 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Column 1</td>
+        <td>Row 2, Column 2</td>
+    </tr>
+</table>`}
             language={"html"}
             showCodeEditor={true}
             />
@@ -43,20 +43,20 @@ export default function Tables() {
             </p>
             <CodeBlock
             code={`
-    <table style="border: 1px solid black;">
-        <tr style="border: 1px solid black;">
-            <th>Column 1</th>
-            <th>Column 2</th>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td>Row 1, Column 1</td>
-            <td>Row 1, Column 2</td>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td>Row 2, Column 1</td>
-            <td>Row 2, Column 2</td>
-        </tr>
-    </table>`}
+<table style="border: 1px solid black;">
+    <tr style="border: 1px solid black;">
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td>Row 1, Column 1</td>
+        <td>Row 1, Column 2</td>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td>Row 2, Column 1</td>
+        <td>Row 2, Column 2</td>
+    </tr>
+</table>`}
         language={"html"}
         showCodeEditor={true}
         />
@@ -70,20 +70,20 @@ export default function Tables() {
         <h1> Cell Padding and Spacing </h1>
         <CodeBlock
         code={`
-    <table style="border: 1px solid black;" cellpadding="10" cellspacing="0" border="1">
-        <tr style="border: 1px solid black;">
-            <th>Column 1</th>
-            <th>Column 2</th>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td>Row 1, Column 1</td>
-            <td>Row 1, Column 2</td>
-        </tr>
-        <tr>
-            <td>Row 2, Column 1</td>
-            <td>Row 2, Column 2</td>
-        </tr>
-    </table>
+<table style="border: 1px solid black;" cellpadding="10" cellspacing="0" border="1">
+    <tr style="border: 1px solid black;">
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td>Row 1, Column 1</td>
+        <td>Row 1, Column 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Column 1</td>
+        <td>Row 2, Column 2</td>
+    </tr>
+</table>
         `}
         language={"html"}
         showCodeEditor={true}
@@ -95,20 +95,20 @@ export default function Tables() {
         <h1> Cell Colors </h1>
         <CodeBlock
         code={`
-    <table border="5">
-        <tr>
-            <th bgcolor="#cccccc">Column 1</th>
-            <th bgcolor="#cccccc">Column 2</th>
-        </tr>
-        <tr>
-            <td bgcolor="#red" style="color:white">Row 1, Column 1</td>
-            <td bgcolor="#orage">Row 1, Column 2</td>
-        </tr>
-        <tr>
-            <td bgcolor="gray">Row 2, Column 1</td>
-            <td bgcolor="#blue">Row 2, Column 2</td>
-        </tr>
-    </table>`}
+<table border="5">
+    <tr>
+        <th bgcolor="#cccccc">Column 1</th>
+        <th bgcolor="#cccccc">Column 2</th>
+    </tr>
+    <tr>
+        <td bgcolor="#red" style="color:white">Row 1, Column 1</td>
+        <td bgcolor="#orage">Row 1, Column 2</td>
+    </tr>
+    <tr>
+        <td bgcolor="gray">Row 2, Column 1</td>
+        <td bgcolor="#blue">Row 2, Column 2</td>
+    </tr>
+</table>`}
             language="html"
             showCodeEditor={true}
         />
@@ -118,27 +118,27 @@ export default function Tables() {
             <p> In some cases, we might need to merge two or more cells into a single cell. We can achieve this using the rowspan and colspan attributes. Here's an example:</p>
             <CodeBlock
             code={`
-    <table style="border: 1px solid black;">
-        <tr style="border: 1px solid blue;">
-            <th>Column 1</th>
-            <th colspan="2">Column 2</th>
-            <th>Column 3</th>
-        </tr>
-        <tr style="border: 1px solid gray;">
-            <td>Row 1, Column 1</td>
-            <td rowspan="5">Row 1 & 2, Column 2</td>
-            <td>Row 1, Column 3</td>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td>Row 2, Column 1</td>
-            <td>Row 2, Column 3</td>
-        </tr>
-        <tr style="border: 1px solid blue;">
-            <td>Row 3, Column 1</td>
-            <td>Row 3, Column 2</td>
-            <td>Row 3, Column 3</td>
-        </tr>
-    </table>
+<table style="border: 1px solid black;">
+    <tr style="border: 1px solid blue;">
+        <th>Column 1</th>
+        <th colspan="2">Column 2</th>
+        <th>Column 3</th>
+    </tr>
+    <tr style="border: 1px solid gray;">
+        <td>Row 1, Column 1</td>
+        <td rowspan="5">Row 1 & 2, Column 2</td>
+        <td>Row 1, Column 3</td>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td>Row 2, Column 1</td>
+        <td>Row 2, Column 3</td>
+    </tr>
+    <tr style="border: 1px solid blue;">
+        <td>Row 3, Column 1</td>
+        <td>Row 3, Column 2</td>
+        <td>Row 3, Column 3</td>
+    </tr>
+</table>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -151,33 +151,33 @@ export default function Tables() {
             <CodeBlock
             code={
                `
-    <table style="font-family: Arial; border-collapse: collapse; width: 100%;">
-        <tr style="border: 1px solid black;">
-            <th style="padding: 10px; text-align: left; background-color: #cccccc;">Field</th>
-            <th style="padding: 10px; text-align: left; background-color: #cccccc;">Description</th>
-            <th style="padding: 10px; text-align: left; background-color: #cccccc;">Example</th>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td style="padding: 10px; text-align: left;">HTML</td>
-            <td style="padding: 10px; text-align: left;">Defines the structure of web pages using tags and attributes.</td>
-            <td style="padding: 10px; text-align: left;">&lt;html&gt;&lt;head&gt;&lt;title&gt;Page Title&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</td>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td style="padding: 10px; text-align: left;">CSS</td>
-            <td style="padding: 10px; text-align: left;">Defines the presentation and layout of web pages using rules and declarations.</td>
-            <td style="padding: 10px; text-align: left;">color: blue; font-size: 16px; margin: 10px;</td>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td style="padding: 10px; text-align: left;">JavaScript</td>
-            <td style="padding: 10px; text-align: left;">Adds interactivity and behavior to web pages through scripting.</td>
-            <td style="padding: 10px; text-align: left;">document.getElementById("demo").innerHTML = "Hello World!";</td>
-        </tr>
-        <tr style="border: 1px solid black;">
-            <td style="padding: 10px; text-align: left;">Responsive Design</td>
-            <td style="padding: 10px; text-align: left;">Creates web pages that adjust to different screen sizes and devices.</td>
-            <td style="padding: 10px; text-align: left;">@media (max-width: 768px) { /* CSS rules */ }</td>
-        </tr>
-    </table>
+<table style="font-family: Arial; border-collapse: collapse; width: 100%;">
+    <tr style="border: 1px solid black;">
+        <th style="padding: 10px; text-align: left; background-color: #cccccc;">Field</th>
+        <th style="padding: 10px; text-align: left; background-color: #cccccc;">Description</th>
+        <th style="padding: 10px; text-align: left; background-color: #cccccc;">Example</th>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td style="padding: 10px; text-align: left;">HTML</td>
+        <td style="padding: 10px; text-align: left;">Defines the structure of web pages using tags and attributes.</td>
+        <td style="padding: 10px; text-align: left;">&lt;html&gt;&lt;head&gt;&lt;title&gt;Page Title&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</td>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td style="padding: 10px; text-align: left;">CSS</td>
+        <td style="padding: 10px; text-align: left;">Defines the presentation and layout of web pages using rules and declarations.</td>
+        <td style="padding: 10px; text-align: left;">color: blue; font-size: 16px; margin: 10px;</td>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td style="padding: 10px; text-align: left;">JavaScript</td>
+        <td style="padding: 10px; text-align: left;">Adds interactivity and behavior to web pages through scripting.</td>
+        <td style="padding: 10px; text-align: left;">document.getElementById("demo").innerHTML = "Hello World!";</td>
+    </tr>
+    <tr style="border: 1px solid black;">
+        <td style="padding: 10px; text-align: left;">Responsive Design</td>
+        <td style="padding: 10px; text-align: left;">Creates web pages that adjust to different screen sizes and devices.</td>
+        <td style="padding: 10px; text-align: left;">@media (max-width: 768px) { /* CSS rules */ }</td>
+    </tr>
+</table>
                ` 
             }
             language="html"

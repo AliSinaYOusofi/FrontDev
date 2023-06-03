@@ -28,10 +28,10 @@ export default function Quotation() {
             </p>
             <CodeBlock
             code={`
-    <blockquote>
-        The expert in anything was once a beginner.
-        <cite>— Helen Hayes</cite>
-    </blockquote>`}
+<blockquote>
+    The expert in anything was once a beginner.
+    <cite>— Helen Hayes</cite>
+</blockquote>`}
             language="html"
             showCodeEditor={true}
             />
@@ -55,9 +55,9 @@ export default function Quotation() {
                 It is beneficial for accessibility purposes.
             </p>
             <CodeBlock code={`
-    <p>
-        <abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for creating web pages.
-    </p>`}
+<p>
+    <abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for creating web pages.
+</p>`}
             language={'html'}
             showCodeEditor={true}
             />
@@ -66,12 +66,12 @@ export default function Quotation() {
             <p>The {"<address>"} tag is used to present contact information for an author or owner of a document or an article. If used inside {"<footer>"} or {"<article>"} elements it provides contact information for that particular content.</p>
             <CodeBlock
             code={`
-    <address>
-        Written by <a href="mailto:john@example.com">John Doe</a> <br>
-        Visit us at:<br>
-        Example.com<br>
-        123 Main Stree Super City, CA 
-    </address>`}
+<address>
+    Written by <a href="mailto:john@example.com">John Doe</a> <br>
+    Visit us at:<br>
+    Example.com<br>
+    123 Main Stree Super City, CA 
+</address>`}
             language="html"
             showCodeEditor={true}
             />

@@ -17,8 +17,8 @@ export default function InputAttributes() {
             <p> The name attribute is essential to associating a specific input field with the rest of the form. Input fields should have distinct names to avoid confusion when submitting the form to the server. </p>
             <CodeBlock
             code={`
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
             `}
             language="html"
             showCodeEditor={true}
@@ -28,8 +28,8 @@ export default function InputAttributes() {
             <p> The value attribute allows developers to set the initial value of an input element. For instance, set a specific value for a checkbox if it is initially checked.</p>
             <CodeBlock
             code={`
-    <input type="checkbox" id="remember" name="remember" value="true" checked>
-    <label   label for="remember">Remember me</label>
+<input type="checkbox" id="remember" name="remember" value="true" checked>
+<label   label for="remember">Remember me</label>
             `}
             language="html"
             showCodeEditor={true}
@@ -41,8 +41,8 @@ export default function InputAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="Enter your email">
             `}
             language={"html"}
             showCodeEditor={true}
@@ -54,8 +54,8 @@ export default function InputAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="city">City:</label>
-    <input type="text" id="city" name="city" required>
+<label for="city">City:</label>
+<input type="text" id="city" name="city" required>
             `}
             language="html"
             showCodeEditor={true}
@@ -73,10 +73,11 @@ export default function InputAttributes() {
             </p>
             <CodeBlock
             code={`
-    <input type="radio" id="male" name="gender" value="male" checked>
-    label for="male">Male</label>
+<input type="radio" id="male" name="gender" value="male" checked>
+label for="male">Male</label>
             `}
             language="html"
+        
             showCodeEditor={true}
             />
 
@@ -86,8 +87,8 @@ export default function InputAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="id">ID:</label>
-    <input type="text" id="id" name="id" value="345" readonly>
+<label for="id">ID:</label>
+<input type="text" id="id" name="id" value="345" readonly>
             `}
             language="html"
             showCodeEditor={true}
@@ -97,10 +98,10 @@ export default function InputAttributes() {
             <p> The maxlength attribute limits the number of characters that can be inputted in an input field. </p>
             <CodeBlock
             code={`
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" maxlength="30">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" maxlength="30">
             `}
-            language="Html"
+            language="html"
             showCodeEditor={true}
             />
 
@@ -108,8 +109,8 @@ export default function InputAttributes() {
             <p> The autofocus attribute ensures that the input field is focused on page load, which makes it more convenient for users. </p>
             <CodeBlock
             code={`
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" autofocus>
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" autofocus>
             `}
             language="html"
             showCodeEditor={true}
@@ -121,8 +122,8 @@ export default function InputAttributes() {
             </p>
             <CodeBlock
             code={`
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" min="0" max="100" step="1">
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="0" max="100" step="1">
             `}
             language="html"
             showCodeEditor={true}
@@ -132,8 +133,8 @@ export default function InputAttributes() {
             <p> The pattern attribute sets a regular expression pattern that the user's input must match for the input to be valid. </p>
             <CodeBlock
             code={`
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+">
             `}
             language="html"
             showCodeEditor={true}
@@ -145,12 +146,12 @@ export default function InputAttributes() {
             </p>
             <CodeBlock
             code={`
-    <form id="form1">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-    </form>
+<form id="form1">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
+</form>
 
-    <input type="submit" form="form1" value="Submit">
+<input type="submit" form="form1" value="Submit">
             `}
             language="html"
             showCodeEditor={true}
@@ -160,8 +161,8 @@ export default function InputAttributes() {
             <p> The multiple attribute is used for input types that allow multiple entries, such as file uploads.</p>
             <CodeBlock
             code={`
-    <label for="file">Select multiple files:</label>
-    <input type="file" id="file" name="file" multiple>
+<label for="file">Select multiple files:</label>
+<input type="file" id="file" name="file" multiple>
             `}
             language="html"
             showCodeEditor={true}
@@ -171,8 +172,8 @@ export default function InputAttributes() {
             <p> The accept attribute specifies the type of file that the input field should accept.</p>
             <CodeBlock
             code={`
-    <label for="file">Select an image:</label>
-    <input type="file" id="file" name="file" accept="image/*">
+<label for="file">Select an image:</label>
+<input type="file" id="file" name="file" accept="image/*">
             `}
             language="html"
             showCodeEditor={true}
@@ -182,8 +183,8 @@ export default function InputAttributes() {
             <p> The autocapitalize and autocorrect attributes allow the developer to enable or disable the corresponding functionality on the input field.</p>
             <CodeBlock
             code={`
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" autocapitalize="words" autocorrect="on">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" autocapitalize="words" autocorrect="on">
             `}
             language="html"
             showCodeEditor={true}

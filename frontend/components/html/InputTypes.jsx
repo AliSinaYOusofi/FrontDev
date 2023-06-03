@@ -8,7 +8,7 @@ export default function InputTypes() {
     const [lessonsSprings] = useSlideAnimation();
 
     return (
-        <animated.div key={lessonsSprings.key} style={...lessonsSprings}>
+        <animated.div key={lessonsSprings.key} style={lessonsSprings}>
             <h1> Input Types </h1>
             <p>
                 HTML provides various input types that allow users to enter different types of data. These input types are crucial for user interaction with web forms. In this part, we will explore all the input types available in HTML and their use cases.

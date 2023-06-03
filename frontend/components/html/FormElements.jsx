@@ -34,8 +34,8 @@ export default function FormElements() {
                 Input fields are used to collect data from users in various formats, such as text, numbers, email, and passwords.
             </p>
             <CodeBlock code={`
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">`
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">`
             }
             language="html"
             showCodeEditor={true}
@@ -47,12 +47,12 @@ export default function FormElements() {
             </p>
             <CodeBlock
             code={`
-    <label for="color">Choose a color:</label>
-    <select id="color" name="color">
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-        <option value="blue">Blue</option>
-    </select>
+<label for="color">Choose a color:</label>
+<select id="color" name="color">
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+</select>
             `}
             language="html"
             showCodeEditor={true}
@@ -64,8 +64,8 @@ export default function FormElements() {
             </p>
             <CodeBlock
             code={`
-    <label for="feedback">Please enter your feedback:</label>
-    <textarea id="feedback" name="feedback" rows="5" cols="40"></textarea>
+<label for="feedback">Please enter your feedback:</label>
+<textarea id="feedback" name="feedback" rows="5" cols="40"></textarea>
             `}
             language="html"
             showCodeEditor={true}
@@ -86,13 +86,13 @@ export default function FormElements() {
             </p>
             <CodeBlock
             code={`
-    <fieldset>
-        <legend>Contact Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-    </fieldset>
+<fieldset>
+    <legend>Contact Information</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+</fieldset>
             `}
             language="html"
             showCodeEditor={true}
@@ -104,15 +104,15 @@ export default function FormElements() {
             </p>
             <CodeBlock
             code={`
-    <label for="browser">Choose a browser:</label>
-    <input list="browsers" name="browser">
-    <datalist id="browsers">
-        <option value="Chrome">
-        <option value="Firefox">
-        <option value="Internet Explorer">
-        <option value="Opera">
-        <option value="Safari">
-    </datalist>
+<label for="browser">Choose a browser:</label>
+<input list="browsers" name="browser">
+<datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Internet Explorer">
+    <option value="Opera">
+    <option value="Safari">
+</datalist>
             `}
             language={"html"}
             showCodeEditor={true}
@@ -124,9 +124,9 @@ export default function FormElements() {
             </p>
             <CodeBlock
             code={`
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" name="amount">
-    <output for="amount"></output>
+<label for="amount">Amount:</label>
+<input type="number" id="amount" name="amount">
+<output for="amount"></output>
             `}
             language="html"
             showCodeEditor={true}
@@ -136,18 +136,18 @@ export default function FormElements() {
             <p> The option and optgroup elements create options and option groups within select elements. </p>
             <CodeBlock
             code={`
-    <select>
-        <optgroup label="Colors">
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-        </optgroup>
-        <optgroup label="Fruits"> 
-            <option value="apple">Apple</option> 
-            <option value="banana">Banana</option> 
-            <option value="orange">Orange</option>
-        </optgroup> 
-    </select>
+<select>
+    <optgroup label="Colors">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </optgroup>
+    <optgroup label="Fruits"> 
+        <option value="apple">Apple</option> 
+        <option value="banana">Banana</option> 
+        <option value="orange">Orange</option>
+    </optgroup> 
+</select>
             `}
             language="html"
             showCodeEditor={true}

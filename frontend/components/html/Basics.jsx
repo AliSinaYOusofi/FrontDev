@@ -31,16 +31,16 @@ export default function Basics() {
                 </p>
                 <CodeBlock 
                     code={`
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Page Title</title>
-        </head>
-        <body>
-            <h1>This is a Heading</h1>
-            <p>This is a paragraph.</p>
-        </body>
-    </html>`
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+    </body>
+</html>`
                     }
                     language="html"
                     showCodeEditor={true}
@@ -76,12 +76,12 @@ export default function Basics() {
 
                 <CodeBlock
                     code={`
-    <h1>This is a Heading Level 1</h1>
-    <h2>This is a Heading Level 2</h2>
-    <h3>This is a Heading Level 3</h3>
-    <h4>This is a Heading Level 4</h4>
-    <h5>This is a Heading Level 5</h5>
-    <h6>This is a Heading Level 6</h6>`
+<h1>This is a Heading Level 1</h1>
+<h2>This is a Heading Level 2</h2>
+<h3>This is a Heading Level 3</h3>
+<h4>This is a Heading Level 4</h4>
+<h5>This is a Heading Level 5</h5>
+<h6>This is a Heading Level 6</h6>`
                     }
                     language="html"
                     showCodeEditor={true}
@@ -121,11 +121,11 @@ export default function Basics() {
                 <p className="mt-1"> Lists are used to display a list of items on the webpage. You can create a list using the ul tag.</p>
                 <CodeBlock 
                     code={` 
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>`
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>`
                     }
                     language="html"
                     showCodeEditor={true}
@@ -141,10 +141,10 @@ export default function Basics() {
 
                 <CodeBlock
                 code={`
-    <div class="division">
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
-    </div>`
+<div class="division">
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+</div>`
                 }
                 language="html"
                 showCodeEditor={true}

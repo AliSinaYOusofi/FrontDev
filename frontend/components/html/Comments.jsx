@@ -30,8 +30,9 @@ export default function Comments() {
             </p>
             <CodeBlock
             code={
-    `<!DOCTYPE html>
-    <html>
+`
+<!DOCTYPE html>
+<html>
     <head>
         <title>My Web Page</title>
         <meta charset="UTF-8">
@@ -45,7 +46,7 @@ export default function Comments() {
         <p>Here is some content for my web page.</p>
         <!-- This is a comment for future updates to the content above -->
     </body>
-    </html>`
+</html>`
             }
             language="html"
             showCodeEditor={true}

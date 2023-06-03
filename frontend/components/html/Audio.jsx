@@ -19,10 +19,10 @@ export default function Audio() {
             </p>
             <CodeBlock
             code={`
-    <audio controls>
-        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio controls>
+    <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
             `}
             language="html"
             showCodeEditor={false}
@@ -59,10 +59,10 @@ export default function Audio() {
             <p>The src attribute specifies the URL of the audio file that you want to play.</p>
             <CodeBlock
             code={`
-    <audio controls>
-        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio controls>
+    <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
             `}
             language="html"
             showCodeEditor={false}
@@ -74,10 +74,10 @@ export default function Audio() {
             </p>
             <CodeBlock
             code={`
-    <audio controls>
-        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio controls>
+    <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
             `}
             language="html"
             showCodeEditor={false}
@@ -91,10 +91,10 @@ export default function Audio() {
             </p>
             <CodeBlock
             code={`
-    <audio controls autoplay loop muted>
-        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio controls autoplay loop muted>
+    <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
             `}
             language="html"
             showCodeEditor={false}
@@ -104,10 +104,10 @@ export default function Audio() {
             <p>The preload attribute determines when the audio file should be loaded. It can take one of three values: auto (the default), metadata, and none. </p>
             <CodeBlock
             code={`
-    <audio controls preload="auto">
-        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio controls preload="auto">
+    <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
             `}
             language="html"
             showCodeEditor={false}
@@ -119,10 +119,10 @@ export default function Audio() {
             </p>
             <CodeBlock
             code={`
-    <audio controls volume="0.5">
-        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<audio controls volume="0.5">
+    <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
             `}
             language="html"
             showCodeEditor={false}

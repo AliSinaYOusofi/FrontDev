@@ -77,7 +77,7 @@ export default function CodeBlock({code, language, showCodeEditor, onlyCode}) {
                     </svg>
                 }
             </div>
-            <CodeEditor code={code} showCodeEditor={showCodeEditor}/>
+            <CodeEditor language={language} code={code} showCodeEditor={showCodeEditor}/>
         </div>
     )
 }
