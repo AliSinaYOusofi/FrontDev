@@ -1,7 +1,7 @@
 import React from 'react'
 import './globals.css'
 import 'prismjs/themes/prism-tomorrow.css';
-import NextContextProvider, { useNextContext } from '@/context/NextContext';
+import NextContextProvider from '@/context/NextContext';
 import "@uiw/codemirror-theme-abcdef"
 
 

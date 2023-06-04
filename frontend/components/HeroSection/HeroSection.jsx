@@ -2,7 +2,6 @@
 import React from 'react'
 import { animated, useSpring } from '@react-spring/web'
 import { useNextContext } from '@/context/NextContext';
-import { darkThemeSetup, lightThemeSetup } from '@/utils/themseAndFont';
 
 
 export default function     HeroSection() {
@@ -28,13 +27,11 @@ export default function     HeroSection() {
         })
     )
 
-    const moveInfoContainer = () => {
-        document.getElementById("info").scrollIntoView({behavior: "smooth"});
-    }
-
+    const moveInfoContainer = () => document.getElementById("info").scrollIntoView({behavior: "smooth"});
+    
     return (
     
-        <animated.div className={` relative overflow-hidden`} key={spring.key} style={{...spring}}>
+        <animated.div className={` relative overflow-hidden `} key={spring.key} style={{...spring}}>
         
             <div className="relative z-10 mt-10 ">
                 <div className="max-w-[85rem] h-fit mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">

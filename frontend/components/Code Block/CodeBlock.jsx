@@ -42,13 +42,9 @@ export default function CodeBlock({code, language, showCodeEditor, onlyCode}) {
 
     return (
         <div className="relative mt-5">
-            <pre className="">
-                <code className={`rounded-md p-3 mr-10 language-${language}`}>
-                    {code}
-                </code>
-            </pre>
+            
             <div 
-                className={`absolute top-0 right-0 p-2 text-white`}
+                className={`absolute top-[5.1rem] z-10 right-5 p-2 text-white`}
                 onClick={copyToClipboard}
             >
                 {

@@ -13,7 +13,7 @@ export default function Home() {
   const {theme} = useNextContext();
 
   return (
-    <main className={`${theme ? darkThemeSetup : lightThemeSetup}`}>
+    <main className={`${theme ? "bg-[#010409] text-white" : "bg-white"}`}>
         <Navbar />
         <HeroSection />
         <InfoContainer />
