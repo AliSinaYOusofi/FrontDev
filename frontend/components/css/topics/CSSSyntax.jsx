@@ -22,11 +22,11 @@ export default function CSSSyntax() {
             </p>
             <CodeBlock
             code={`
-    selector {
-        property: value;
-        property: value;
-        property: value;
-    }
+selector {
+    property: value;
+    property: value;
+    property: value;
+}
             `}
             language="css"
             showCodeEditor={false}
@@ -46,12 +46,12 @@ export default function CSSSyntax() {
             <p> Here is an example of CSS declarations: </p>
             <CodeBlock
             code={`
-    p {
-        color: red;
-        font-size: 16px;
-        background-color: #FFFFFF;
-        margin: 10px;
-    }
+p {
+    color: red;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    margin: 10px;
+}
             `}
             language="css"
             showCodeEditor={false}

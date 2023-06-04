@@ -19,8 +19,8 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-    <label for="inputField">Input Field:</label>
-    <input type="text" id="inputField" name="inputField">
+<label for="inputField">Input Field:</label>
+<input type="text" id="inputField" name="inputField">
             `}
             language="html"
             showCodeEditor={true}
@@ -35,8 +35,8 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
             `}
             langauge="html"
             showCodeEditor={true}
@@ -46,8 +46,8 @@ export default function InputTypes() {
             <p> The number input type is used to accept a number from a user. </p>
             <CodeBlock
             code={`
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" min="0" max="100">
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="0" max="100">
             `}
             language="html"
             showCodeEditor={true}
@@ -59,11 +59,11 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date">
+<label for="date">Date:</label>
+<input type="date" id="date" name="date">
 
-    <label for="time">Time:</label>
-    <input type="time" id="time" name="time">
+<label for="time">Time:</label>
+<input type="time" id="time" name="time">
             `}
             language="html"
             showCodeEditor={true}
@@ -75,11 +75,11 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
+<label for="password">Password:</label>
+<input type="password" id="password" name="password">
             `}
             language="html"
             showCodeEditor={true}
@@ -89,12 +89,12 @@ export default function InputTypes() {
             <p>The checkbox input type enables developers to offer users multiple choices in their form.</p>
             <CodeBlock
             code={`
-    <label for="interests">Select your interests:</label>
-    <input type="checkbox" id="books" name="interests" value="books">
-    <label for="books">Books</label>
+<label for="interests">Select your interests:</label>
+<input type="checkbox" id="books" name="interests" value="books">
+<label for="books">Books</label>
 
-    <input type="checkbox" id="music" name="interests" value="music">
-    <label for="music">Music</label>
+<input type="checkbox" id="music" name="interests" value="music">
+<label for="music">Music</label>
             `}
             language="html"
             showCodeEditor={true}
@@ -104,12 +104,12 @@ export default function InputTypes() {
             <p> The radio input type only allows users to select one option among the available set.</p>
             <CodeBlock
             code={`
-    <label for="gender">Choose your gender:</label>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">Male</label>
+<label for="gender">Choose your gender:</label>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
 
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
             `}
             language="html"
             showCodeEditor={true}
@@ -121,8 +121,8 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-    <label for="slider">Select a level:</label>
-    <input type="range" id="slider" name="slider" min="0" max="10" step="1">
+<label for="slider">Select a level:</label>
+<input type="range" id="slider" name="slider" min="0" max="10" step="1">
             `}
             language="html"
             showCodeEditor={true}
@@ -134,8 +134,8 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-    <label for="myfile">Select a file:</label>
-    <input type="file" id="myfile" name="myfile">`
+<label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile">`
             }
             language="html"
             showCodeEditor={true}
@@ -147,8 +147,8 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
             `}
             language="html"
             showCodeEditor={true}

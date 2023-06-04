@@ -69,7 +69,7 @@ export default function Navbar() {
     }
 
     
-    const ulList = (<nav key={mobileNavAnimated.key} style={mobileNavAnimated} className={`block md:hidden lg:hidden transition-all duration-300 ${!theme  ? "bg-gray-50" : "bg-black/30"} mt-10 py-10 w-[90%] mx-auto rounded-md`}>
+    const ulList = (<nav key={mobileNavAnimated.key} style={mobileNavAnimated} className={`block md:hidden lg:hidden transition-all duration-300 ${theme  ? "bg-[#0D1117]" : "bg-gray-50"} mt-10 py-10 w-[90%] mx-auto rounded-md mb-5`}>
     <ul className="flex flex-col items-start ml-10  justify-start gap-6 text-sm">
         <li className="">
             <Link className="  transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/">
@@ -150,7 +150,7 @@ export default function Navbar() {
     return (
         <header className="">
             <animated.div
-                className={`${theme ? "bg-black text-white"  : "bg-white text-black"} mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8`}
+                className={`${theme ? "bg-[#161B22] text-white"  : "bg-white text-black"} mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8`}
                 key={spring.key} style={{...spring}}
                 >
                 <span onClick={() => setTheme(prevTheme => !prevTheme)} className="block cursor-pointer text-teal-600" href="/">
@@ -205,19 +205,19 @@ export default function Navbar() {
 
                     <div className="flex items-center gap-4">
                         <div className="sm:flex sm:gap-4">
-                        <a
-                                className="block rounded-md bg-gray-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-black"
+                            <button
+                                className="block bg-[#2EA043] hover:bg-[#28ae40] rounded-md px-5 py-2.5 text-sm font-medium text-white"
                                 href="/"
                             >
                                 Login
-                            </a>
+                            </button>
 
-                            <a
-                                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-black/80 transition hover:text-black sm:block"
+                            <button
+                                className="hidden border-2 border-[#2EA043] hover:bg-[#2EA043] rounded-md px-5 py-2.5 text-sm font-medium  sm:block"
                                 href="/"
                             >
                                 Register
-                            </a>
+                            </button>
                         </div>
 
                         <button
