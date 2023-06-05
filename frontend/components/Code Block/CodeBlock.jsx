@@ -44,7 +44,7 @@ export default function CodeBlock({code, language, showCodeEditor, onlyCode}) {
         <div className="relative mt-5">
             
             <div 
-                className={`absolute top-[5.1rem] z-10 right-5 p-2 text-white`}
+                className={`absolute top-[5.1rem] z-10 right-5 p-2 ${!theme ? "text-black": "text-white"}`}
                 onClick={copyToClipboard}
             >
                 {

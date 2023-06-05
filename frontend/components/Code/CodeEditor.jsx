@@ -22,7 +22,7 @@ export default function CodeEditor({code, showCodeEditor, language}) {
 
     return (
         <>
-            <h1 className="text-[1.5rem] mt-5"> Try it yourself </h1>
+            <h1 className="text-[1.5rem] mt-5"> Code Playground </h1>
 
             <div className="mt-4">
                 <div className={`${theme ? darkThemeSetup : lightThemeSetup} rounded-md p-4`}>
@@ -34,9 +34,9 @@ export default function CodeEditor({code, showCodeEditor, language}) {
                         extensions={[loadLanguage(language ? String(language)?.toLowerCase() : "html")]}
                     />
                 </div>
-                <h1 className="text-[1.5rem] mt-4">Output</h1>
+                <h1 className="text-[1.5rem] mt-4">Live Preview</h1>
 
-                <div className={` rounded-md p-4 mt-4 ${theme ? "bg-gray-950" : "bg-gray-100"}`}>
+                <div className={` rounded-md p-4 mt-4 ${theme ? "bg-[#0D1117]" : "bg-gray-100"}`}>
                     <Preview code={newCode}/> 
                 </div>
             </div>
