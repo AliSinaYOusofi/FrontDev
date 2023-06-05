@@ -18,7 +18,7 @@ export default function Introduction() {
             
             <h1> Why we use CSS </h1>
             <p> CSS plays a vital role in modern web design. Its benefits include: </p>
-            <ul className="ml-20 list-disc">
+            <ul className=" ml-10 list-disc">
                 <li>Separation of content and presentation: CSS helps keep the structure and content of a web page separate from its style.</li>
                 <li>Consistency across web pages: Designers can ensure that all pages on a website have a consistent look and feel by defining styles in a central stylesheet.</li>
                 <li>Ease of maintenance: Changes to a website's design can be made easier without affecting its content, thanks to the separation of content and presentation.</li>

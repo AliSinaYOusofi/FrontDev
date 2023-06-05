@@ -14,7 +14,7 @@ export const Selectors = () => {
             <p>
                 CSS Selectors are used to choose and style specific elements in a HTML document. A CSS selector selects the HTML element(s) that you want to style. There are several types of selectors in CSS:
             </p>
-            <ul className="ml-20 list-disc">
+            <ul className="md:ml-20 ml-10 list-disc">
                 <li> Type Selector </li>
                 <li>Class Selector</li>
                 <li>ID Selector</li>
@@ -103,7 +103,7 @@ export const Selectors = () => {
 
             <h1> Attribute Selector </h1>
             <p>The attribute selector is used to select elements based on their attributes. We can select elements based on their attribute name, value, or a combination of name and value. There are four different types of attribute selectors:</p>
-            <ul className="ml-20 list-disc">
+            <ul className="md:ml-20 ml-10 list-disc">
                 <li>[attribute] – Selects all elements that have the specified attribute name.</li>
                 <li>[attribute=value] – Selects all elements that have the specified attribute and value.</li>
                 <li>[attribute~=value] – Selects all elements that have the specified attribute and value within a space-separated list of values.</li>
@@ -154,16 +154,16 @@ export const Selectors = () => {
     <head>
         <title>My Website</title>
         <style>
-            li:hover {
-                background-color: yellow;
+            .item:hover {
+                background-color: green;
             }
         </style>
     </head>
     <body>
         <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
         </ul>
     </body>
 </html>
@@ -182,7 +182,7 @@ export const Selectors = () => {
     <head>
         <title>My Website</title>
         <style>
-            i::first-letter {
+            h6::first-letter {
                 font-size: 2em;
                 font-weight: bold;
                 color: red;
@@ -190,14 +190,14 @@ export const Selectors = () => {
         </style>
     </head>
     <body>
-        <i> This is in italic. </i>
+        <h6> First letter is in red. </h6>
     </body>
 </html>
             `}
             language="html"
             showCodeEditor={true}
             />
-            <p>This code will make the first letter of the {"<i>"} element appear in bold, red, and twice the size of the rest of the text.</p>
+            <p>This code will make the first letter of the {"<h6>"} element appear in bold, red, and twice the size of the rest of the text.</p>
             <h1> Conclusion </h1>
             <p>
             CSS Selectors are a powerful tool for styling web pages. By using these selectors, we can apply custom styles to specific elements on a web page, making our pages more visually appealing.

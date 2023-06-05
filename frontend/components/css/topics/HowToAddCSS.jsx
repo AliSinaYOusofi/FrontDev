@@ -12,7 +12,7 @@ export default function HowToAddCSS() {
 
             <h1> How to add CSS</h1>
             <p className="">
-                There are three ways to add CSS to HTML. We will be going through each of them.
+            Adding CSS to your HTML documents can provide more dynamic styling options and improve the overall appearance and functionality of your website. There are several methods to add CSS to an HTML document, including the inline, internal, and external approaches. The most commonly used method is the external approach, which involves creating a CSS file separate from your HTML code and linking it to your HTML document. This method allows you to reuse the same CSS file across multiple pages, making it easier to maintain a consistent design and layout throughout your website. Once you have created your CSS file, you can link it to your HTML document using the {"<link>"} tag in the {"<head>"} section of your HTML code. With the CSS file linked, you can then use CSS selectors to define the styles for your HTML elements. By adding CSS to your HTML, you can enhance the visual appeal and user experience of your website.
             </p>
 
             <h1> 1. Inline CSS </h1>
@@ -64,6 +64,17 @@ export default function HowToAddCSS() {
                 This method involves creating a separate .css file and linking it to the HTML file with a {"<link>"} tag in the {"<head>"} section. Here's an example:
             </p>
 
+            <p>styles.css:</p>
+            <p> In the same directory where you html files resided make a file named styles.css and add the CSS code below.</p>
+            <CodeBlock
+            code={`
+h2 {
+    color: red;
+}
+            `}
+            language="css"
+            onlyCode={true}
+            />
             <p> index.html</p>
             <CodeBlock
             code={`
@@ -74,8 +85,8 @@ export default function HowToAddCSS() {
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <span>This text will be red.</span>
-        <span>This text will also be red.</span>
+        <h2>This text will be red.</h2>
+        <h2>This text will also be red.</h2>
     </body>
 </html>
             `}
@@ -83,17 +94,6 @@ export default function HowToAddCSS() {
             showCodeEditor={true}
             />
 
-            <p>styles.css:</p>
-            <p> In the same directory where you html files resided make a file named styles.css and add the CSS code below.</p>
-            <CodeBlock
-            code={`
-span {
-    color: red;
-}
-            `}
-            language="css"
-            onlyCode={true}
-            />
 
             <p> 
                 This method is the best option for larger projects, as it allows you to keep the CSS code separate from the HTML code, making it easier to maintain and update.

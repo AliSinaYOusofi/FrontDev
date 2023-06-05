@@ -12,6 +12,15 @@ import useSlideAnimation from "@/hooks/useSlideAnimation";
 import { useNextContext } from "@/context/NextContext";
 import HowToAddCSS from "./topics/HowToAddCSS";
 import { Selectors } from "./topics/Selectors";
+import CSSComments from "./topics/CSSComments";
+import CSSColors from "./topics/CSSColors";
+import Backgrounds from "./topics/backgrounds";
+import Borders from "./topics/Borders";
+import Margin from "./topics/Margin";
+import Padding from "./topics/Padding";
+import WidthHeight from "./topics/WidthHeight";
+import Outline from "./topics/Outline";
+import OutlineVSBorders from "./topics/OutlineVSBorders";
 
 
 
@@ -28,14 +37,32 @@ export default function Sidebar() {
         <Introduction />,
         <CSSSyntax />,
         <HowToAddCSS />,
-        <Selectors />
+        <Selectors />,
+        <CSSComments />,
+        <CSSColors />,
+        <Backgrounds />,
+        <Borders />,
+        <Margin />,
+        <Padding />,
+        <WidthHeight />,
+        <Outline />,
+        <OutlineVSBorders />
     ];
 
     const liArray = [
-        "Introduction",
+        "CSS Introduction",
         "CSS Syntax",
         "How To Add CSS",
-        "Selectors"
+        "CSS Selectors",
+        "CSS Comments",
+        "CSS Colors",
+        "CSS Backgrounds",
+        "CSS Borders",
+        "CSS Margin",
+        "CSS Padding",
+        "CSS Width Height property",
+        "CSS outline",
+        "CSS outline vs. Borders",
         
     ]
     
@@ -206,7 +233,7 @@ export default function Sidebar() {
                 { component}
             </div>
 
-            <div className={`pagination-container mt-5 w-full flex flex-row md:py-2 md:px-0 py-5 px-4 md:flex-row justify-between items-center text-white`}>
+            <div className={`pagination-container mt-5 w-full flex flex-wrap flex-row md:py-2 md:px-0 py-5 px-4 md:flex-row justify-between items-center text-white`}>
                 
                 <button 
                     className={`${currentPage <=0 ? "cursor-not-allowed" : ""} hover:bg-[#28ae40] bg-[#2EA043] relative rounded-md px-5 py-2.5 text-sm font-medium ` } 
