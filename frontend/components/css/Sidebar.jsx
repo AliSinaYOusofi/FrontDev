@@ -21,6 +21,13 @@ import Padding from "./topics/Padding";
 import WidthHeight from "./topics/WidthHeight";
 import Outline from "./topics/Outline";
 import OutlineVSBorders from "./topics/OutlineVSBorders";
+import TextColor from "./topics/TextColor";
+import TextAlignment from "./topics/TextAlignment";
+import TextDecoration from "./topics/TextDecoration";
+import TextTransformation from "./topics/TextTransformation";
+import TextShadow from "./topics/TextShadow";
+import CSSFonts from "./topics/CSSFonts";
+import CSSFontProp from "./topics/CSSFontProp";
 
 
 
@@ -46,7 +53,14 @@ export default function Sidebar() {
         <Padding />,
         <WidthHeight />,
         <Outline />,
-        <OutlineVSBorders />
+        <OutlineVSBorders />,
+        <TextColor />,
+        <TextAlignment />,
+        <TextDecoration />,
+        <TextTransformation />,
+        <TextShadow />,
+        <CSSFonts />,
+        <CSSFontProp />
     ];
 
     const liArray = [
@@ -63,7 +77,13 @@ export default function Sidebar() {
         "CSS Width Height property",
         "CSS outline",
         "CSS outline vs. Borders",
-        
+        "CSS Text Color",
+        "CSS Text Alignment",
+        "CSS Text Decoration",
+        "CSS Text Transformation",
+        "CSS Text Shadow",
+        "CSS font",
+        "CSS font properties"
     ]
     
     const [spring] = useSlideAnimation();
