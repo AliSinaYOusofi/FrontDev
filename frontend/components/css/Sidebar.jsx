@@ -28,6 +28,20 @@ import TextTransformation from "./topics/TextTransformation";
 import TextShadow from "./topics/TextShadow";
 import CSSFonts from "./topics/CSSFonts";
 import CSSFontProp from "./topics/CSSFontProp";
+import CSSIcons from "./topics/CSSIcons";
+import CSSLinks from "./topics/CSSLinks";
+import CSSListStyleType from "./topics/CSSListStyleType";
+import CSSTables from "./topics/CSSTables";
+import CSSDisplay from "./topics/CSSDisplay";
+import CSSPositions from "./topics/CSSPositions";
+import CSSZIndex from "./topics/CSSZIndex";
+import CSSOverflow from "./topics/CSSOverflow";
+import CSSFloat from "./topics/CSSFloat";
+import CSSCombinators from "./topics/CSSCombinators";
+import PseudoClasses from "./topics/PseudoClasses";
+import PseudoElements from "./topics/PseudoElements";
+import CSSOpacity from "./topics/CSSOpacity";
+import CSSAttrSelector from "./topics/CSSAttrSelector";
 
 
 
@@ -60,7 +74,21 @@ export default function Sidebar() {
         <TextTransformation />,
         <TextShadow />,
         <CSSFonts />,
-        <CSSFontProp />
+        <CSSFontProp />,
+        <CSSIcons />,
+        <CSSLinks />,
+        <CSSListStyleType />,
+        <CSSTables />,
+        <CSSDisplay />,
+        <CSSPositions />,
+        <CSSZIndex />,
+        <CSSOverflow />,
+        <CSSFloat />,
+        <CSSCombinators />,
+        <PseudoClasses />,
+        <PseudoElements />,
+        <CSSOpacity />,
+        <CSSAttrSelector />
     ];
 
     const liArray = [
@@ -83,7 +111,21 @@ export default function Sidebar() {
         "CSS Text Transformation",
         "CSS Text Shadow",
         "CSS font",
-        "CSS font properties"
+        "CSS font properties",
+        "CSS Icons",
+        "CSS Links",
+        "CSS Lists",
+        "CSS Tables",
+        "CSS Display",
+        "CSS Position",
+        "CSS z-index",
+        "CSS Overflow",
+        "CSS Float",
+        "CSS Combinators",
+        "CSS Pseudo-Classes",
+        "CSS Pseudo-Elements",
+        "CSS Opacity",
+        "CSS Attr Selector"
     ]
     
     const [spring] = useSlideAnimation();
