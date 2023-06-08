@@ -213,7 +213,7 @@ export default function Navbar() {
                             </button>
 
                             <button
-                                className="hidden border-2 border-[#2EA043] hover:bg-[#2EA043] rounded-md px-5 py-2.5 text-sm font-medium  sm:block"
+                                className="hidden border-2 border-[#2EA043] hover:text-white hover:bg-[#2EA043] rounded-md px-5 py-2.5 text-sm font-medium  sm:block"
                                 href="/"
                             >
                                 Register

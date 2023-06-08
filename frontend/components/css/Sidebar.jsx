@@ -42,6 +42,11 @@ import PseudoClasses from "./topics/PseudoClasses";
 import PseudoElements from "./topics/PseudoElements";
 import CSSOpacity from "./topics/CSSOpacity";
 import CSSAttrSelector from "./topics/CSSAttrSelector";
+import CSSForms from "./topics/CSSForms";
+import CSSCounters from "./topics/CSSCounters";
+import CSSUnits from "./topics/CSSUnits";
+import CSSImportant from "./topics/CSSImportant";
+import CSSSpecificity from "./topics/CSSSpecificity";
 
 
 
@@ -88,7 +93,12 @@ export default function Sidebar() {
         <PseudoClasses />,
         <PseudoElements />,
         <CSSOpacity />,
-        <CSSAttrSelector />
+        <CSSAttrSelector />,
+        <CSSForms />,
+        <CSSCounters />,
+        <CSSUnits />,
+        <CSSSpecificity />,
+        <CSSImportant />
     ];
 
     const liArray = [
@@ -125,7 +135,12 @@ export default function Sidebar() {
         "CSS Pseudo-Classes",
         "CSS Pseudo-Elements",
         "CSS Opacity",
-        "CSS Attr Selector"
+        "CSS Attr Selector",
+        "CSS Forms",
+        "CSS Counters",
+        "CSS Units",
+        "CSS Specificity",
+        "CSS !important"
     ]
     
     const [spring] = useSlideAnimation();

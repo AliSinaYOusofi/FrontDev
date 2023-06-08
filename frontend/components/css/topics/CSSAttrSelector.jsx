@@ -35,92 +35,34 @@ selector[attribute=attrValue] {
 
             <h1> Examples of the CSS Attr Selector </h1>
 
-            <h2> Example 1: Modify src Attribute with  </h2>
+
+            <h2> Example 1: Modifying Text Content </h2>
             <p>
-            The following example demonstrates how the attr() selector can modify the src attribute of an HTML element dynamically. In this example, the image's source changes to a new image when the user hovers over the element:
+                The following example demonstrates how the attr() selector can be used to modify the text content of an HTML element based on the value of its data_attribute attribute:
             </p>
-
-            <CodeBlock
-            code={`
-            <!DOCTYPE html>
-            <html>
-              <head>
-                <title>Image Hover Example</title>
-                <style>
-                  /* Change the image source on hover */
-                  .image-hover {
-                    display: inline-block;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    width: 400px;
-                    height: 300px;
-                    background-color: blue;
-                  }
-            
-                  .image-hover:hover {
-                    background-image: url(attr(data-hover-src));
-                  }
-                </style>
-              </head>
-            
-              <body>
-                <div class="image-hover" data-hover-src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"></div>
-              </body>
-            </html>
-            `}
-            language="html"
-            showCodeEditor={true}
-            />
-
-            <p>
-            In this example, the CSS code uses the attr() selector to modify the src attribute of the img tag when the user hovers over the element. The data-hover-src attribute value is assigned to the src attribute, which changes the displayed image.
-            </p>
-
-            <h2> Example 2: Modify alt Attribute with attr() </h2>
-            <p>
-            The following example demonstrates how the attr() selector can modify the alt attribute of an HTML element. In this example, the alt attribute's value is extracted and used in the content of a pseudo-element when the user hovers over the element:
-            </p>
-
             <CodeBlock
             code={`
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Image Hover Example</title>
+        <title>Modifying Text Content with the CSS attr() Selector</title>
         <style>
-        /* Show the image's alternative text on hover */
-        .image-alt {
-            position: relative;
-            display: inline-block;
+        /* Modify the text content based on the value of data_attribute */
+        .example::before {
+            content: attr(data-attribute);
         }
         
-        .image-alt img:hover::after {
-            content: attr(alt);
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            padding: 5px;
-            background-color: #1E90FF;
-            color: #FFF;
-            font-size: 12px;
-            white-space: nowrap;
-            z-index: 1;
-            width: 100px;
-            height: 30px;
-            color: white;   
+        /* Add some styling to the modified text */
+        .example {
+            border-bottom: 1px solid green;
+            padding-bottom: 5px;
         }
-        
         </style>
     </head>
-
     <body>
-        <div class="image-alt">
-        <img 
-            src="https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Example Image"
-        >
-        </div>
+        <h1>Modifying Text Content with the CSS attr() Selector</h1>
+        <p>The following paragraph has its text content modified using the data-attribute:</p>
+        <p class="example" data-attribute="Modified Text"></p>
     </body>
 </html>
             `}
@@ -128,8 +70,64 @@ selector[attribute=attrValue] {
             showCodeEditor={true}
             />
             <p>
-            In this example, the CSS code uses the attr() selector to extract the image's alt attribute value when the user hovers over the element. The extracted value is used in the content of a pseudo-element, which displays the alternative text in a tooltip.
+            In this example, we have a paragraph element with a class of example. The CSS code defines a rule that adds a pseudo-element before this element, and uses the attr() selector to set the content of this pseudo-element to the value of the data-attribute attribute of the .example element.
             </p>
+
+            <h2> Example 2: Applying Styles to Selected Elements </h2>
+            <p>
+                The following example demonstrates how the attr() selector can be used to apply styles to selected elements based on their attribute values:
+            </p>
+            <CodeBlock
+            code={`
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>[data-color="red"] Attribute Selector Example</title>
+        <style>
+            /* Select elements with a data-color attribute equal to "red" */
+            [data-color="red"] {
+                background-color: red;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+            [data-color="green"] {
+                background-color: green;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            [data-color="blue"] {
+                background-color: blue;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>[data-color="red"] Attribute Selector Example</h1>
+        <p>The following elements have a data-color attribute with a value equal to "red":</p>
+        <div data-color="red">This is a red div</div>
+        <p data-color="red">This is a red paragraph</p>
+        <span data-color="blue">This is a blue span</span>
+        <p data-color="green">This is a green paragraph</p>
+    </body>
+</html>
+            `}
+            language="html"
+            showCodeEditor={true}
+            />
+            
+            <p>
+                In this example, we have four elements with data-color attributes that have different values. The CSS code selects all the elements with a data-color attribute whose value is equal to "red". If this selector identifies an element, then the styles specified within the rule will be applied to that element. In this case, we set the background color to red, the text color to white, added some padding and margin for spacing, and chose not to style any other elements.
+            </p>
+
+            <p>
+                When you load this page, you will see that the first two elements (the div and paragraph) have a red background and white text, whilst the other two elements that were not selected by the [data-color="red"] attribute selector have their default style.
+            </p>
+
 
             <h2> Example 3: Modify data-* Attribute with attr() </h2>
             <p>
@@ -178,9 +176,9 @@ selector[attribute=attrValue] {
     <body>
     <div class="image-size">
         <img 
-        src="https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?auto=compress&cs=tinysrgb&w=600"
-        alt="Example Image"
-        data-size="large"
+            src="https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Example Image"
+            data-size="large"
         >
     </div>
     </body>

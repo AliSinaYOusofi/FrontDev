@@ -28,23 +28,23 @@ export default function TextDecoration() {
 	<meta charset="UTF-8">
 	<title>Text Decoration Example</title>
 	<style>
-		.h1 {
+		.h11 {
 			text-decoration-line: underline;
 		}
 	
-		.h2 {
+		.h21 {
 			text-decoration-line: overline line-through;
 		}
 	
-		.paragraph {
+		.paragraph1 {
 			text-decoration-line: none;
 		}
 	</style>
 </head>
 <body>
-	<h1 class="h1">Example of text-decoration-line: underline</h1>
-	<h2 class="h2">Example of text-decoration-line: overline line-through</h2>
-	<p class="paragraph">Example of text-decoration-line: none</p>
+	<h1 class="h11">Example of text-decoration-line: underline</h1>
+	<h2 class="h21">Example of text-decoration-line: overline line-through</h2>
+	<p class="paragraph1">Example of text-decoration-line: none</p>
 </body>
 </html>
             `}
@@ -68,26 +68,26 @@ export default function TextDecoration() {
 	<title>Text Decoration Example</title>
 	<style>
 		
-		.h1 {
+		.h12 {
 			text-decoration-line: underline;
 			text-decoration-color: red;
 		}
 	
-		.h2 {
+		.h22 {
 			text-decoration-line: overline;
 			text-decoration-color: blue;
 		}
 	
-		.paragraph {
+		.paragraph2 {
 			text-decoration-line: line-through;
 			text-decoration-color: green;
 		}
 	</style>
 </head>
 <body>
-	<h1 class="h1">Example of text-decoration-color: red</h1>
-	<h2 class="h2">Example of text-decoration-color: blue</h2>
-	<p class="paragraph">Example of text-decoration-color: green</p>
+	<h1 class="h12">Example of text-decoration-color: red</h1>
+	<h2 class="h22">Example of text-decoration-color: blue</h2>
+	<p class="paragraph2">Example of text-decoration-color: green</p>
 </body>
 </html>
             `}
@@ -121,26 +121,26 @@ export default function TextDecoration() {
         <meta charset="UTF-8">
         <title>Text Decoration Example</title>
         <style>
-            .h1 {
+            .h13 {
                 text-decoration-line: underline;
                 text-decoration-color: red;
             }
         
-            .h2 {
+            .h23 {
                 text-decoration-line: overline;
                 text-decoration-color: blue;
             }
         
-            .paragraph {
+            .paragraph3 {
                 text-decoration-line: line-through;
                 text-decoration-color: green;
             }
         </style>
     </head>
     <body>
-        <h1 class="h1">Example of text-decoration-color: red</h1>
-        <h2 class="h2">Example of text-decoration-color: blue</h2>
-        <p class="paragraph">Example of text-decoration-color: green</p>
+        <h1 class="h13">Example of text-decoration-color: red</h1>
+        <h2 class="h23">Example of text-decoration-color: blue</h2>
+        <p class="paragraph3">Example of text-decoration-color: green</p>
     </body>
 </html>
             `}
@@ -163,19 +163,19 @@ export default function TextDecoration() {
         <meta charset="UTF-8">
         <title>Text Decoration Example</title>
         <style>
-            .h1 {
+            .h14 {
                 text-decoration-line: underline;
                 text-decoration-color: red;
                 text-decoration-thickness: 2px;
             }
         
-            .h2 {
+            .h24 {
                 text-decoration-line: overline;
                 text-decoration-color: blue;
                 text-decoration-thickness: 4px;
             }
         
-            .paragraph {
+            .paragraph4 {
                 text-decoration-line: line-through;
                 text-decoration-color: green;
                 text-decoration-thickness: 6px;
@@ -183,9 +183,9 @@ export default function TextDecoration() {
         </style>
     </head>
     <body>
-        <h1 class="h1">Example of text-decoration-thickness: 2px</h1>
-        <h2 class="h2">Example of text-decoration-thickness: 4px</h2>
-        <p class="paragraph">Example of text-decoration-thickness: 6px</p>
+        <h1 class="h14">Example of text-decoration-thickness: 2px</h1>
+        <h2 class="h24">Example of text-decoration-thickness: 4px</h2>
+        <p class="paragraph4">Example of text-decoration-thickness: 6px</p>
     </body>
 </html>
             `}
@@ -209,23 +209,23 @@ export default function TextDecoration() {
         <meta charset="UTF-8">
         <title>Text Decoration Example</title>
         <style>
-            .h1 {
+            .h15 {
                 text-decoration: underline red 2px;
             }
         
-            .h2 {
+            .h25 {
                 text-decoration: overline blue dotted;
             }
         
-            .paragraph {
+            .paragraph5 {
                 text-decoration: line-through green;
             }
         </style>
     </head>
     <body>
-        <h1 class="h1">Example of text-decoration property - underline red 2px</h1>
-        <h2 class="h2">Example of text-decoration property - overline blue dotted</h2>
-        <p class="paragraph">Example of text-decoration property - line-through green</p>
+        <h1 class="h15">Example of text-decoration property - underline red 2px</h1>
+        <h2 class="h25">Example of text-decoration property - overline blue dotted</h2>
+        <p class="paragraph5">Example of text-decoration property - line-through green</p>
     </body>
 </html>
             `}
