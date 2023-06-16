@@ -264,7 +264,7 @@ p {
         <title>Attribute Selector Example</title>
         <style>
             img[alt="logo"] {
-                border: 1px solid black;
+                border: 3px solid green;
             }
         </style>
     </head>

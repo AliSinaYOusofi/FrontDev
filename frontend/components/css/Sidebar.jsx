@@ -47,6 +47,7 @@ import CSSCounters from "./topics/CSSCounters";
 import CSSUnits from "./topics/CSSUnits";
 import CSSImportant from "./topics/CSSImportant";
 import CSSSpecificity from "./topics/CSSSpecificity";
+import BoxModel from "./topics/BoxModel";
 
 
 
@@ -98,7 +99,8 @@ export default function Sidebar() {
         <CSSCounters />,
         <CSSUnits />,
         <CSSSpecificity />,
-        <CSSImportant />
+        <CSSImportant />,
+        <BoxModel />
     ];
 
     const liArray = [
@@ -140,7 +142,8 @@ export default function Sidebar() {
         "CSS Counters",
         "CSS Units",
         "CSS Specificity",
-        "CSS !important"
+        "CSS !important",
+        "CSS Box Model"
     ]
     
     const [spring] = useSlideAnimation();
@@ -310,7 +313,7 @@ export default function Sidebar() {
                 { component}
             </div>
 
-            <div className={`pagination-container mt-5 w-full flex flex-wrap flex-row md:py-2 md:px-0 py-5 px-4 md:flex-row justify-between items-center text-white`}>
+            <div className={`pagination-container gap-y-5 mt-5 w-full flex flex-wrap flex-row md:py-2 md:px-0 py-5 px-4 md:flex-row justify-between items-center text-white`}>
                 
                 <button 
                     className={`${currentPage <=0 ? "cursor-not-allowed" : ""} hover:bg-[#28ae40] bg-[#2EA043] relative rounded-md px-5 py-2.5 text-sm font-medium ` } 
