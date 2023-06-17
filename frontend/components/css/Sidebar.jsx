@@ -48,6 +48,8 @@ import CSSUnits from "./topics/CSSUnits";
 import CSSImportant from "./topics/CSSImportant";
 import CSSSpecificity from "./topics/CSSSpecificity";
 import BoxModel from "./topics/BoxModel";
+import CSSFlexIntro from "./topics/CSSFlexIntro";
+import CSSFlexContainer from "./topics/CSSFlexContainer";
 
 
 
@@ -100,7 +102,9 @@ export default function Sidebar() {
         <CSSUnits />,
         <CSSSpecificity />,
         <CSSImportant />,
-        <BoxModel />
+        <BoxModel />,
+        <CSSFlexIntro />,
+        <CSSFlexContainer />
     ];
 
     const liArray = [
@@ -143,7 +147,9 @@ export default function Sidebar() {
         "CSS Units",
         "CSS Specificity",
         "CSS !important",
-        "CSS Box Model"
+        "CSS Box Model",
+        "Flexbox introduction",
+        "CSS flex container"
     ]
     
     const [spring] = useSlideAnimation();
