@@ -50,6 +50,10 @@ import CSSSpecificity from "./topics/CSSSpecificity";
 import BoxModel from "./topics/BoxModel";
 import CSSFlexIntro from "./topics/CSSFlexIntro";
 import CSSFlexContainer from "./topics/CSSFlexContainer";
+import CSSFlexItems from "./topics/CSSFlexItems";
+import CSSGridIntro from "./topics/CSSGridIntro";
+import CSSGridContainer from "./topics/CSSGridContainer";
+import CSSGridItems from "./topics/CSSGridItems";
 
 
 
@@ -104,7 +108,11 @@ export default function Sidebar() {
         <CSSImportant />,
         <BoxModel />,
         <CSSFlexIntro />,
-        <CSSFlexContainer />
+        <CSSFlexContainer />,
+        <CSSFlexItems />,
+        <CSSGridIntro />,
+        <CSSGridContainer />,
+        <CSSGridItems />
     ];
 
     const liArray = [
@@ -149,7 +157,11 @@ export default function Sidebar() {
         "CSS !important",
         "CSS Box Model",
         "Flexbox introduction",
-        "CSS flex container"
+        "CSS flex container",
+        "CSS flex items",
+        "CSS Grid Introduction",
+        "CSS Grid container",
+        "CSS Grid items"
     ]
     
     const [spring] = useSlideAnimation();
