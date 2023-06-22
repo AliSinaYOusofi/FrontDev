@@ -56,7 +56,10 @@ import CSSGridContainer from "./topics/CSSGridContainer";
 import CSSGridItems from "./topics/CSSGridItems";
 import CSSAnimations from "./topics/CSSAnimations";
 import CSSTransitions from "./topics/CSSTransitions";
-
+import CSSGradients from "./topics/CSSGradients";
+import CSSTransformFuncs from "./topics/CSSTransformFuncs";
+import CSSMedaiQueries from "./topics/CSSMedaiQueries";
+import { usePathname } from 'next/navigation';
 
 
 export default function Sidebar() {
@@ -65,6 +68,8 @@ export default function Sidebar() {
     const [component, setComponent] = useState(null);
     const [selectedTopic, setSelectedTopic] = useState(null);
     const detailsRef = useRef(null);
+
+    const pathname = usePathname();
 
     const {theme} = useNextContext();
 
@@ -116,7 +121,10 @@ export default function Sidebar() {
         <CSSGridContainer />,
         <CSSGridItems />,
         <CSSTransitions />,
-        <CSSAnimations />
+        <CSSAnimations />,
+        <CSSGradients />,
+        <CSSTransformFuncs />,
+        <CSSMedaiQueries />
     ];
 
     const liArray = [
@@ -168,6 +176,9 @@ export default function Sidebar() {
         "CSS Grid items",
         "CSS Transitions",
         "CSS Animations",
+        "CSS Gradients",
+        "CSS Transform functions",
+        "CSS Media Queries"
     ]
     
     const [spring] = useSlideAnimation();
@@ -180,7 +191,12 @@ export default function Sidebar() {
             setComponent(componentsArray[0]);
             setCurrentPage(0);
         }
-    }, [])
+        console.log(pathname);
+        if (pathname.split("/").length >= 2) {
+            let componentString = pathname.split("/")[0];
+            console.log(componentString);
+        }
+    }, [pathname])
     
     const searchTopics = (event) => {
         const searchText = event.target.value.toLowerCase();
@@ -235,6 +251,9 @@ export default function Sidebar() {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
     
+    const updateHistory = (li) => {
+        history.replaceState(window.history.state, "", `/css/${li}`)
+    }
     const menuItems = liArray.map( (li, index) => 
         <li 
             className={`${activeListItem === index  ? theme ? "bg-[#161B22] border-l-4 border-green-500": "bg-gray-100 border-l-4 border-green-500" : ""} ${theme ? "hover:bg-[#161B22]" : "hover:bg-gray-100"}`} 
@@ -243,6 +262,7 @@ export default function Sidebar() {
                 handleMenuItemClick(index);
                 setActiveListItem(index);
                 setSelectedTopic(li);
+                updateHistory(li)
             }}>
             {li}
         </li> 
