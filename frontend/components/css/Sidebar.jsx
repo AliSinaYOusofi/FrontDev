@@ -54,6 +54,8 @@ import CSSFlexItems from "./topics/CSSFlexItems";
 import CSSGridIntro from "./topics/CSSGridIntro";
 import CSSGridContainer from "./topics/CSSGridContainer";
 import CSSGridItems from "./topics/CSSGridItems";
+import CSSAnimations from "./topics/CSSAnimations";
+import CSSTransitions from "./topics/CSSTransitions";
 
 
 
@@ -112,7 +114,9 @@ export default function Sidebar() {
         <CSSFlexItems />,
         <CSSGridIntro />,
         <CSSGridContainer />,
-        <CSSGridItems />
+        <CSSGridItems />,
+        <CSSTransitions />,
+        <CSSAnimations />
     ];
 
     const liArray = [
@@ -161,7 +165,9 @@ export default function Sidebar() {
         "CSS flex items",
         "CSS Grid Introduction",
         "CSS Grid container",
-        "CSS Grid items"
+        "CSS Grid items",
+        "CSS Transitions",
+        "CSS Animations",
     ]
     
     const [spring] = useSlideAnimation();
