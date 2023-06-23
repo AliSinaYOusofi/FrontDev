@@ -3,62 +3,10 @@
 import { animated } from "@react-spring/web";
 import React, {useEffect, useRef, useState } from "react";
 
-import Introduction from "./topics/Introduction";
-import CSSSyntax from "./topics/CSSSyntax";
-
-
 import useSlideAnimation from "@/hooks/useSlideAnimation";
 
 import { useNextContext } from "@/context/NextContext";
-import HowToAddCSS from "./topics/HowToAddCSS";
-import { Selectors } from "./topics/Selectors";
-import CSSComments from "./topics/CSSComments";
-import CSSColors from "./topics/CSSColors";
-import Backgrounds from "./topics/backgrounds";
-import Borders from "./topics/Borders";
-import Margin from "./topics/Margin";
-import Padding from "./topics/Padding";
-import WidthHeight from "./topics/WidthHeight";
-import Outline from "./topics/Outline";
-import OutlineVSBorders from "./topics/OutlineVSBorders";
-import TextColor from "./topics/TextColor";
-import TextAlignment from "./topics/TextAlignment";
-import TextDecoration from "./topics/TextDecoration";
-import TextTransformation from "./topics/TextTransformation";
-import TextShadow from "./topics/TextShadow";
-import CSSFonts from "./topics/CSSFonts";
-import CSSFontProp from "./topics/CSSFontProp";
-import CSSIcons from "./topics/CSSIcons";
-import CSSLinks from "./topics/CSSLinks";
-import CSSListStyleType from "./topics/CSSListStyleType";
-import CSSTables from "./topics/CSSTables";
-import CSSDisplay from "./topics/CSSDisplay";
-import CSSPositions from "./topics/CSSPositions";
-import CSSZIndex from "./topics/CSSZIndex";
-import CSSOverflow from "./topics/CSSOverflow";
-import CSSFloat from "./topics/CSSFloat";
-import CSSCombinators from "./topics/CSSCombinators";
-import PseudoClasses from "./topics/PseudoClasses";
-import PseudoElements from "./topics/PseudoElements";
-import CSSOpacity from "./topics/CSSOpacity";
-import CSSAttrSelector from "./topics/CSSAttrSelector";
-import CSSForms from "./topics/CSSForms";
-import CSSCounters from "./topics/CSSCounters";
-import CSSUnits from "./topics/CSSUnits";
-import CSSImportant from "./topics/CSSImportant";
-import CSSSpecificity from "./topics/CSSSpecificity";
-import BoxModel from "./topics/BoxModel";
-import CSSFlexIntro from "./topics/CSSFlexIntro";
-import CSSFlexContainer from "./topics/CSSFlexContainer";
-import CSSFlexItems from "./topics/CSSFlexItems";
-import CSSGridIntro from "./topics/CSSGridIntro";
-import CSSGridContainer from "./topics/CSSGridContainer";
-import CSSGridItems from "./topics/CSSGridItems";
-import CSSAnimations from "./topics/CSSAnimations";
-import CSSTransitions from "./topics/CSSTransitions";
-import CSSGradients from "./topics/CSSGradients";
-import CSSTransformFuncs from "./topics/CSSTransformFuncs";
-import CSSMedaiQueries from "./topics/CSSMedaiQueries";
+
 import { usePathname } from 'next/navigation';
 
 
@@ -74,111 +22,11 @@ export default function Sidebar({}) {
     const {theme} = useNextContext();
 
     const componentsArray = [
-        <Introduction />,
-        <CSSSyntax />,
-        <HowToAddCSS />,
-        <Selectors />,
-        <CSSComments />,
-        <CSSColors />,
-        <Backgrounds />,
-        <Borders />,
-        <Margin />,
-        <Padding />,
-        <WidthHeight />,
-        <Outline />,
-        <OutlineVSBorders />,
-        <TextColor />,
-        <TextAlignment />,
-        <TextDecoration />,
-        <TextTransformation />,
-        <TextShadow />,
-        <CSSFonts />,
-        <CSSFontProp />,
-        <CSSIcons />,
-        <CSSLinks />,
-        <CSSListStyleType />,
-        <CSSTables />,
-        <CSSDisplay />,
-        <CSSPositions />,
-        <CSSZIndex />,
-        <CSSOverflow />,
-        <CSSFloat />,
-        <CSSCombinators />,
-        <PseudoClasses />,
-        <PseudoElements />,
-        <CSSOpacity />,
-        <CSSAttrSelector />,
-        <CSSForms />,
-        <CSSCounters />,
-        <CSSUnits />,
-        <CSSSpecificity />,
-        <CSSImportant />,
-        <BoxModel />,
-        <CSSFlexIntro />,
-        <CSSFlexContainer />,
-        <CSSFlexItems />,
-        <CSSGridIntro />,
-        <CSSGridContainer />,
-        <CSSGridItems />,
-        <CSSTransitions />,
-        <CSSAnimations />,
-        <CSSGradients />,
-        <CSSTransformFuncs />,
-        <CSSMedaiQueries />
+        
     ];
 
     const liArray = [
-        "CSS Introduction",
-        "CSS Syntax",
-        "CSS How To Add CSS",
-        "CSS Selectors",
-        "CSS Comments",
-        "CSS Colors",
-        "CSS Backgrounds",
-        "CSS Borders",
-        "CSS Margin",
-        "CSS Padding",
-        "CSS Width Height property",
-        "CSS outline",
-        "CSS outline vs. Borders",
-        "CSS Text Color",
-        "CSS Text Alignment",
-        "CSS Text Decoration",
-        "CSS Text Transformation",
-        "CSS Text Shadow",
-        "CSS font",
-        "CSS font properties",
-        "CSS Icons",
-        "CSS Links",
-        "CSS Lists",
-        "CSS Tables",
-        "CSS Display",
-        "CSS Position",
-        "CSS z-index",
-        "CSS Overflow",
-        "CSS Float",
-        "CSS Combinators",
-        "CSS Pseudo-Classes",
-        "CSS Pseudo-Elements",
-        "CSS Opacity",
-        "CSS Attr Selector",
-        "CSS Forms",
-        "CSS Counters",
-        "CSS Units",
-        "CSS Specificity",
-        "CSS !important",
-        "CSS Box Model",
-        "CSS Flexbox introduction",
-        "CSS flex container",
-        "CSS flex items",
-        "CSS Grid Introduction",
-        "CSS Grid container",
-        "CSS Grid items",
-        "CSS Transitions",
-        "CSS Animations",
-        "CSS Gradients",
-        "CSS Transform functions",
-        "CSS Media Queries"
+        
     ]
     
     const [spring] = useSlideAnimation();

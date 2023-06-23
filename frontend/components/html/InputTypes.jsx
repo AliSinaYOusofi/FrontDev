@@ -20,7 +20,7 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="inputField">Input Field:</label>
-<input type="text" id="inputField" name="inputField">
+<input style="color:black" type="text" id="inputField" name="inputField">
             `}
             language="html"
             showCodeEditor={true}
@@ -36,7 +36,7 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="username">Username:</label>
-<input type="text" id="username" name="username">
+<input style="color:black" type="text" id="username" name="username">
             `}
             langauge="html"
             showCodeEditor={true}
@@ -47,7 +47,7 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="age">Age:</label>
-<input type="number" id="age" name="age" min="0" max="100">
+<input style="color:black" type="number" id="age" name="age" min="0" max="100">
             `}
             language="html"
             showCodeEditor={true}
@@ -60,10 +60,10 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="date">Date:</label>
-<input type="date" id="date" name="date">
+<input style="color:black" type="date" id="date" name="date">
 
 <label for="time">Time:</label>
-<input type="time" id="time" name="time">
+<input style="color:black" type="time" id="time" name="time">
             `}
             language="html"
             showCodeEditor={true}
@@ -76,10 +76,10 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="email">Email:</label>
-<input type="email" id="email" name="email">
+<input style="color:black" type="email" id="email" name="email">
 
 <label for="password">Password:</label>
-<input type="password" id="password" name="password">
+<input style="color:black" type="password" id="password" name="password">
             `}
             language="html"
             showCodeEditor={true}
@@ -90,10 +90,10 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="interests">Select your interests:</label>
-<input type="checkbox" id="books" name="interests" value="books">
+<input style="color:black" type="checkbox" id="books" name="interests" value="books">
 <label for="books">Books</label>
 
-<input type="checkbox" id="music" name="interests" value="music">
+<input style="color:black" type="checkbox" id="music" name="interests" value="music">
 <label for="music">Music</label>
             `}
             language="html"
@@ -105,10 +105,10 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="gender">Choose your gender:</label>
-<input type="radio" id="male" name="gender" value="male">
+<input style="color:black" type="radio" id="male" name="gender" value="male">
 <label for="male">Male</label>
 
-<input type="radio" id="female" name="gender" value="female">
+<input style="color:black" type="radio" id="female" name="gender" value="female">
 <label for="female">Female</label>
             `}
             language="html"
@@ -122,7 +122,7 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="slider">Select a level:</label>
-<input type="range" id="slider" name="slider" min="0" max="10" step="1">
+<input style="color:black" type="range" id="slider" name="slider" min="0" max="10" step="1">
             `}
             language="html"
             showCodeEditor={true}
@@ -135,7 +135,7 @@ export default function InputTypes() {
             <CodeBlock
             code={`
 <label for="myfile">Select a file:</label>
-<input type="file" id="myfile" name="myfile">`
+<input style="color:black" type="file" id="myfile" name="myfile">`
             }
             language="html"
             showCodeEditor={true}
@@ -147,8 +147,8 @@ export default function InputTypes() {
             </p>
             <CodeBlock
             code={`
-<input type="submit" value="Submit">
-<input type="reset" value="Reset">
+<input style="color:black" type="submit" value="Submit">
+<input style="color:black" type="reset" value="Reset">
             `}
             language="html"
             showCodeEditor={true}
@@ -156,7 +156,7 @@ export default function InputTypes() {
 
             <h1> Hidden </h1>
             <p> The hidden input type is used to submit data that the user does not need to see or interact with. </p>
-            <CodeBlock code={`<input type="hidden" name="session_id" value="208942">`} language={"html"} showCodeEditor={true}/>
+            <CodeBlock code={`<input type="hidden" name="session_id" value="208942">`} language={"html"} onlyCode={true}/>
 
             <h1> Conclusion </h1>
             <p>

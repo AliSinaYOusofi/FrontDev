@@ -23,12 +23,12 @@ export default function FormAttributes() {
             code={`
 <form action="#" method="POST">
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+    <input style="color:black" type="text" id="username" name="username">
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
+    <input style="color:black" type="password" id="password" name="password">
 
-    <input type="submit" value="Submit">
+    <input style="color:black" type="submit" value="Submit">
 </form>
             `}
             language="html"
@@ -42,7 +42,7 @@ export default function FormAttributes() {
             <p>
                 The action attribute tells the browser where to send the form data once it is submitted by the user. The action attribute’s value is usually a URL that points to a server-side script that can handle the form data.
             </p>
-            <CodeBlock code={`<form action="https://example.com/form-handler" method="POST">`} language="html" showCodeEditor={true} />
+            <CodeBlock code={`<form action="https://example.com/form-handler" method="POST">`} language="html" onlyCode={true} />
 
             <h1> FormAction</h1>
             <p>
@@ -53,11 +53,11 @@ export default function FormAttributes() {
             </p>
             <CodeBlock
             code={`
-<form action="/form-handler.php" method="post">
+<form action="/form-handler.php" method="post" >
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+    <input style="color:black" type="text" id="username" name="username">
     <br><br>
-    <input type="submit" value="Submit" formaction="/submit-handler.php">
+    <inputstyle="color:black" type="submit" value="Submit" formaction="/submit-handler.php">
     <input type="submit" value="Save as Draft" formaction="/draft-handler.php">
 </form>
             `}
@@ -81,13 +81,13 @@ export default function FormAttributes() {
             <p>
                 Data is appended to the form's action URL, and the data is visible in the URL. The information sent is limited, and the method is used mainly for submitting search queries and displaying the results.
             </p>
-            <CodeBlock code={`<form action="https://example.com/form-handler" method="GET"> </form>`} language="html" showCodeEditor={false} />
+            <CodeBlock code={`<form action="https://example.com/form-handler" method="GET"> </form>`} language="html" onlyCode={true} />
 
             <h1> 2. POST method </h1>
             <p>
                 Data is sent in the request body, and the data is not visible in the URL. The method is more secure and can be used for submitting sensitive data like passwords and credit card information.
             </p>
-            <CodeBlock code={`<form action="https://example.com/form-handler" method="POST"> </form>`} language="html" showCodeEditor={false} />
+            <CodeBlock code={`<form action="https://example.com/form-handler" method="POST"> </form>`} language="html" onlyCode={true} />
 
             <h1> Name </h1>
             <p>
@@ -95,7 +95,7 @@ export default function FormAttributes() {
             </p>
             <CodeBlock code={`
 <label for="name">Name</label>
-<input type="text" name="name" id="name">
+<input style="color:black" type="text" name="name" id="name">
         `}
             language="html"
             showCodeEditor={true}
@@ -108,7 +108,7 @@ export default function FormAttributes() {
             <CodeBlock
             code={`
 <label for="location">Location</label>
-<input type="text" name="location" id="location" required>
+<input style="color:black" type="text" name="location" id="location" required>
             `}
             language="html"
             showCodeEditor={true}
@@ -121,7 +121,7 @@ export default function FormAttributes() {
             <CodeBlock
             code={`
 <label for="email">Email</label>
-<input type="email" name="email" id="email" placeholder="name@example.com">
+<input style="color:black" type="email" name="email" id="email" placeholder="name@example.com">
             `}
             language="html"
             showCodeEditor={true}
@@ -134,9 +134,9 @@ export default function FormAttributes() {
             <CodeBlock
             code={`
 <label for="gender">Gender</label>
-<input type="radio" name="gender" id="male" value="male">
+<input style="color:black" type="radio" name="gender" id="male" value="male">
 <label for="male">Male</label>
-<input type="radio" name="gender" id="female" value="female">
+<input style="color:black" type="radio" name="gender" id="female" value="female">
 <label for="female">Female</label>`
             }
             language="html"
@@ -150,7 +150,7 @@ export default function FormAttributes() {
             <CodeBlock
             code={`
 <label for="email">Email</label>
-<input type="email" name="email" id="email" disabled>
+<input style="color:black" type="email" name="email" id="email" disabled>
             `}
             language="html"
             showCodeEditor={true}
@@ -163,7 +163,7 @@ export default function FormAttributes() {
             <CodeBlock
             code={`
 <label for="date">Date</label>
-<input type="text" id="date" name="date" value="2022-01-01" readonly>
+<input style="color:black" type="text" id="date" name="date" value="2022-01-01" readonly>
             `}
             language="html"
             showCodeEditor={true}

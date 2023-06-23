@@ -31,7 +31,7 @@ export default function Project1() {
         <h2 style="font-size: 24px;">About me</h2>
         <p><b>Name:</b> John</p>
         <p><b>Occupation:</b> Software Engineer</p>
-        <pre style="background-color: #ddd; padding: 10px;">I love coding and building things from scratch!</pre>
+        <pre style="background-color: #ddd; padding: 10px;color:black">I love coding and building things from scratch!</pre>
         <hr />
         
         <!-- Skills section -->

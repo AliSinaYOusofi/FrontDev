@@ -35,7 +35,7 @@ export default function FormElements() {
             </p>
             <CodeBlock code={`
 <label for="name">Name:</label>
-<input type="text" id="name" name="name">`
+<input style="color:black" type="text" id="name" name="name">`
             }
             language="html"
             showCodeEditor={true}
@@ -48,7 +48,7 @@ export default function FormElements() {
             <CodeBlock
             code={`
 <label for="color">Choose a color:</label>
-<select id="color" name="color">
+<select style="color:black" id="color" name="color">
     <option value="red">Red</option>
     <option value="green">Green</option>
     <option value="blue">Blue</option>
@@ -65,7 +65,7 @@ export default function FormElements() {
             <CodeBlock
             code={`
 <label for="feedback">Please enter your feedback:</label>
-<textarea id="feedback" name="feedback" rows="5" cols="40"></textarea>
+<textarea style="color:black" id="feedback" name="feedback" rows="5" cols="40"></textarea>
             `}
             language="html"
             showCodeEditor={true}
@@ -86,12 +86,12 @@ export default function FormElements() {
             </p>
             <CodeBlock
             code={`
-<fieldset>
+<fieldset >
     <legend>Contact Information</legend>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
+    <input style="color:black" type="text" id="name" name="name">
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
+    <input style="color:black" type="email" id="email" name="email">
 </fieldset>
             `}
             language="html"
@@ -105,8 +105,8 @@ export default function FormElements() {
             <CodeBlock
             code={`
 <label for="browser">Choose a browser:</label>
-<input list="browsers" name="browser">
-<datalist id="browsers">
+<input style="color:black" list="browsers" name="browser">
+<datalist style="color:black" id="browsers">
     <option value="Chrome">
     <option value="Firefox">
     <option value="Internet Explorer">
@@ -125,7 +125,7 @@ export default function FormElements() {
             <CodeBlock
             code={`
 <label for="amount">Amount:</label>
-<input type="number" id="amount" name="amount">
+<input style="color:black" type="number" id="amount" name="amount">
 <output for="amount"></output>
             `}
             language="html"
@@ -136,7 +136,7 @@ export default function FormElements() {
             <p> The option and optgroup elements create options and option groups within select elements. </p>
             <CodeBlock
             code={`
-<select>
+<select style="color:black">
     <optgroup label="Colors">
         <option value="red">Red</option>
         <option value="green">Green</option>

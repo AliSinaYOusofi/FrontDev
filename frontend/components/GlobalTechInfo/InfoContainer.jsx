@@ -119,33 +119,35 @@ export default function InfoContainer() {
                         description={"CSS is a style sheet language used to describe the presentation of a document written in a markup language such as HTML."}
                     />
                 </div>
+
+                <div>
+                    <TechInfo
+                        step="3"
+                        name="Git"
+                        description={"Git is a widely used distributed version control system used for tracking changes in source code during software development."}
+                        svg={gitSvg}
+                    />
+                </div>
+
                 <div>
 
                     <TechInfo
-                        step={"3"}
+                        step={"4"}
                         name="javascript"
                         description={"JavaScript is a high-level programming language that is commonly used for developing and implementing interactive web functionality."}
                         svg={jsSvg}
                     />
                 </div>
 
-                <div>
-                    <TechInfo
-                        step="4"
-                        name="Git"
-                        description={"Git is a widely used distributed version control system used for tracking changes in source code during software development. It helps developers to collaborate and maintain a clean codebase."}
-                        svg={gitSvg}
-                    />
-                </div>
 
-                <div className="h-full">
+                {/* <div className="h-full">
                     <TechInfo
                         step={"5"}
                         name="React"
                         description={"React.js is an open-source JavaScript library used for building user interfaces. It is maintained by Facebook and helps developers create reusable UI components for web applications. "}
                         svg={reactSvg}
                     />
-                </div>
+                </div> */}
                 
             </animated.div>
         </>

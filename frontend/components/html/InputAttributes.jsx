@@ -18,7 +18,7 @@ export default function InputAttributes() {
             <CodeBlock
             code={`
 <label for="username">Username:</label>
-<input type="text" id="username" name="username">
+<input style="color:black" type="text" id="username" name="username">
             `}
             language="html"
             showCodeEditor={true}
@@ -28,8 +28,8 @@ export default function InputAttributes() {
             <p> The value attribute allows developers to set the initial value of an input element. For instance, set a specific value for a checkbox if it is initially checked.</p>
             <CodeBlock
             code={`
-<input type="checkbox" id="remember" name="remember" value="true" checked>
-<label   label for="remember">Remember me</label>
+<input style="color:black" type="checkbox" id="remember" name="remember" value="true" checked>
+<label    label for="remember">Remember me</label>
             `}
             language="html"
             showCodeEditor={true}
@@ -42,7 +42,7 @@ export default function InputAttributes() {
             <CodeBlock
             code={`
 <label for="email">Email:</label>
-<input type="email" id="email" name="email" placeholder="Enter your email">
+<input style="color:black" type="email" id="email" name="email" placeholder="Enter your email">
             `}
             language={"html"}
             showCodeEditor={true}
@@ -55,7 +55,7 @@ export default function InputAttributes() {
             <CodeBlock
             code={`
 <label for="city">City:</label>
-<input type="text" id="city" name="city" required>
+<input style="color:black" type="text" id="city" name="city" required>
             `}
             language="html"
             showCodeEditor={true}
@@ -73,7 +73,7 @@ export default function InputAttributes() {
             </p>
             <CodeBlock
             code={`
-<input type="radio" id="male" name="gender" value="male" checked>
+<input style="color:black" type="radio" id="male" name="gender" value="male" checked>
 label for="male">Male</label>
             `}
             language="html"
@@ -88,7 +88,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="id">ID:</label>
-<input type="text" id="id" name="id" value="345" readonly>
+<input style="color:black" type="text" id="id" name="id" value="345" readonly>
             `}
             language="html"
             showCodeEditor={true}
@@ -99,7 +99,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="email">Email:</label>
-<input type="email" id="email" name="email" maxlength="30">
+<input style="color:black" type="email" id="email" name="email" maxlength="30">
             `}
             language="html"
             showCodeEditor={true}
@@ -110,7 +110,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="username">Username:</label>
-<input type="text" id="username" name="username" autofocus>
+<input style="color:black" type="text" id="username" name="username" autofocus>
             `}
             language="html"
             showCodeEditor={true}
@@ -123,7 +123,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="age">Age:</label>
-<input type="number" id="age" name="age" min="0" max="100" step="1">
+<input style="color:black" type="number" id="age" name="age" min="0" max="100" step="1">
             `}
             language="html"
             showCodeEditor={true}
@@ -134,7 +134,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="username">Username:</label>
-<input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+">
+<input style="color:black" type="text" id="username" name="username" pattern="[a-zA-Z0-9]+">
             `}
             language="html"
             showCodeEditor={true}
@@ -148,10 +148,10 @@ label for="male">Male</label>
             code={`
 <form id="form1">
 <label for="username">Username:</label>
-<input type="text" id="username" name="username">
+<input style="color:black" type="text" id="username" name="username">
 </form>
 
-<input type="submit" form="form1" value="Submit">
+<input style="color:black" type="submit" form="form1" value="Submit">
             `}
             language="html"
             showCodeEditor={true}
@@ -162,7 +162,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="file">Select multiple files:</label>
-<input type="file" id="file" name="file" multiple>
+<input style="color:black" type="file" id="file" name="file" multiple>
             `}
             language="html"
             showCodeEditor={true}
@@ -173,7 +173,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="file">Select an image:</label>
-<input type="file" id="file" name="file" accept="image/*">
+<input style="color:black" type="file" id="file" name="file" accept="image/*">
             `}
             language="html"
             showCodeEditor={true}
@@ -184,7 +184,7 @@ label for="male">Male</label>
             <CodeBlock
             code={`
 <label for="name">Name:</label>
-<input type="text" id="name" name="name" autocapitalize="words" autocorrect="on">
+<input style="color:black" type="text" id="name" name="name" autocapitalize="words" autocorrect="on">
             `}
             language="html"
             showCodeEditor={true}
