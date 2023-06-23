@@ -37,7 +37,7 @@ export default function FormsIntroduction() {
     <!-- Form components go here -->
 </form>`}
             language={"html"}
-            showCodeEditor={false}
+            onlyCode={true}
             />
 
             <h1> Input Fields </h1>
@@ -58,7 +58,7 @@ export default function FormsIntroduction() {
             <p>
                 For example, a text input field can be created as shown below:
             </p>
-            <CodeBlock code={`<input type="text" name="username" placeholder="Enter username" />`} language="html" showCodeEditor={true} />
+            <CodeBlock code={`<input style="color:black" type="text" name="username" placeholder="Enter username" />`} language="html" showCodeEditor={true} />
 
             <h1> Labels </h1>
             <p>
@@ -67,7 +67,7 @@ export default function FormsIntroduction() {
             <CodeBlock
             code={`
 <label for="username">Username:</label>
-<input type="text" id="username" name="username" />
+<input style="color:black" type="text" id="username" name="username" />
             `}
             language={"html"}
             showCodeEditor={true}
@@ -80,7 +80,7 @@ export default function FormsIntroduction() {
             <CodeBlock
             code={`
 <button type="submit">Submit</button>
-<input type="text" value="Reset Form" />
+<input style="color:black" type="text" value="Reset Form" />
             `}
             language="html"
             showCodeEditor={true}

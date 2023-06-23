@@ -101,6 +101,19 @@ export default function Navbar() {
         </li>
 
         <li>
+            <Link className=" transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/github">
+                Git/Github
+                <svg
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    className="mr-1 w-6 h-6"
+                >
+                    <path d="M15.698 7.287L8.712.302a1.03 1.03 0 00-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 011.55 1.56l1.773 1.774a1.224 1.224 0 011.267 2.025 1.226 1.226 0 01-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 11-1.008-.036V5.887a1.226 1.226 0 01-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 000 1.457l6.986 6.986a1.03 1.03 0 001.457 0l6.953-6.953a1.031 1.031 0 000-1.457" />
+                </svg>
+            </Link>
+        </li>
+
+        <li>
             <Link className=" transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/">
                 Javascript
                 <svg
@@ -114,20 +127,9 @@ export default function Navbar() {
             </Link>
         </li>
 
-        <li>
-            <Link className=" transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/">
-                Git/Github
-                <svg
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    className="mr-1 w-6 h-6"
-                >
-                    <path d="M15.698 7.287L8.712.302a1.03 1.03 0 00-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 011.55 1.56l1.773 1.774a1.224 1.224 0 011.267 2.025 1.226 1.226 0 01-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 11-1.008-.036V5.887a1.226 1.226 0 01-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 000 1.457l6.986 6.986a1.03 1.03 0 001.457 0l6.953-6.953a1.031 1.031 0 000-1.457" />
-                </svg>
-            </Link>
-        </li>
+        
 
-        <li>
+        {/* <li>
             <Link className=" transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/">
                 React
                 <svg
@@ -142,7 +144,7 @@ export default function Navbar() {
                     <path d="M12 15.313c-.687 0-1.392-.029-2.1-.088l-.196-.017-.113-.162a25.697 25.697 0 01-1.126-1.769 26.028 26.028 0 01-.971-1.859l-.084-.177.084-.179c.299-.632.622-1.252.971-1.858.347-.596.726-1.192 1.126-1.77l.113-.16.196-.018a25.148 25.148 0 014.198 0l.194.019.113.16a25.136 25.136 0 012.1 3.628l.083.179-.083.177a24.742 24.742 0 01-2.1 3.628l-.113.162-.194.017c-.706.057-1.412.087-2.098.087zm-1.834-.904c1.235.093 2.433.093 3.667 0a24.469 24.469 0 001.832-3.168 23.916 23.916 0 00-1.832-3.168 23.877 23.877 0 00-3.667 0 23.743 23.743 0 00-1.832 3.168 24.82 24.82 0 001.832 3.168z" />
                 </svg>
             </Link>
-        </li>
+        </li> */}
     </ul>
     </nav>)
 
@@ -183,23 +185,23 @@ export default function Navbar() {
                                 </Link>
                             </li>
 
+
+                            <li>
+                                <Link className=" transition hover:text-gray-500/75" href="/github">
+                                Git/Github
+                                </Link>
+                            </li>
                             <li>
                                 <Link className=" transition hover:text-gray-500/75" href="/">
                                 Javascript
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link className=" transition hover:text-gray-500/75" href="/">
-                                Git/Github
-                                </Link>
-                            </li>
-
-                            <li>
+                            {/* <li>
                                 <Link className=" transition hover:text-gray-500/75" href="/">
                                 React
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
 

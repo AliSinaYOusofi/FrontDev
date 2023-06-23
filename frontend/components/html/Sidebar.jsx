@@ -30,7 +30,7 @@ import Audio from "./Audio";
 import FormProject from "./FormProject";
 import Semantics from "./Semantics";
 import { useNextContext } from "@/context/NextContext";
-import Tooltip from "../tooltip/Tooltip";
+import { usePathname } from "next/navigation";
 
 
 export default function Sidebar() {
@@ -39,6 +39,8 @@ export default function Sidebar() {
     const [component, setComponent] = useState(null);
     const [selectedTopic, setSelectedTopic] = useState(null);
     const detailsRef = useRef(null);
+
+    const pathname = usePathname();
 
     const {theme} = useNextContext();
 
@@ -72,32 +74,32 @@ export default function Sidebar() {
     ];
 
     const liArray = [
-        "Introduction",
-        "Basics",
-        "Attributes",
-        "Headings",
-        "Paragraphs",
-        "Style",
-        "Text Formatting",
-        "Quotation",
-        "Comments",
-        "First Project",
-        "Hyperlinks",
-        "Image",
-        "Lists",
-        "Tables",
-        "Second Project",
-        "MetaTags",
-        "Iframe",
-        "Forms",
-        "Form Attributes",
-        "Form Elements",
-        "Input Types",
-        "Input Attributes",
-        "Form Project",
-        "Video",
-        "Audio",
-        "Semantic elements"
+        "HTML Introduction",
+        "HTML Basics",
+        "HTML Attributes",
+        "HTML Headings",
+        "HTML Paragraphs",
+        "HTML Style",
+        "HTML Text Formatting",
+        "HTML Quotation",
+        "HTML Comments",
+        "HTML First Project",
+        "HTML Hyperlinks",
+        "HTML Image",
+        "HTML Lists",
+        "HTML Tables",
+        "HTML Second Project",
+        "HTML MetaTags",
+        "HTML Iframe",
+        "HTML Forms",
+        "HTML Form Attributes",
+        "HTML Form Elements",
+        "HTML Input Types",
+        "HTML Input Attributes",
+        "HTML Form Project",
+        "HTML Video",
+        "HTML Audio",
+        "HTML Semantic elements"
     ]
     
     const [spring] = useSlideAnimation();
@@ -109,6 +111,19 @@ export default function Sidebar() {
         if (currentPage === null) {
             setComponent(componentsArray[0]);
             setCurrentPage(0);
+        }
+        if (pathname.split("/").length >= 3) {
+
+            let componentString = pathname.replace("%20", " ").split("/")[2]
+            componentString = decodeURI(componentString.replace(/\+/g, '%20'));
+
+            console.log(componentString);
+            
+            let topicIndex = liArray.indexOf(componentString)
+            
+            setComponent(componentsArray[topicIndex])
+            setCurrentPage(topicIndex);
+            setActiveListItem(topicIndex);
         }
     }, [])
     
@@ -139,6 +154,7 @@ export default function Sidebar() {
                 setCurrentPage(page => page + 1);
                 setActiveListItem(currentPage + 1);
                 setSelectedTopic(liArray[currentPage + 1]);
+                updateHistory(liArray[currentPage + 1])
             }
         }, 100)
        
@@ -154,6 +170,7 @@ export default function Sidebar() {
             setCurrentPage(page => page - 1);
             setActiveListItem(currentPage - 1);
             setSelectedTopic(liArray[currentPage - 1]);
+            updateHistory(liArray[currentPage - 1])
           }
         }, 100);
       };
@@ -173,10 +190,15 @@ export default function Sidebar() {
                 handleMenuItemClick(index);
                 setActiveListItem(index);
                 setSelectedTopic(li);
+                updateHistory(li)
             }}>
             {li}
         </li> 
     );
+
+    const updateHistory = (li) => {
+        history.replaceState(window.history.state, "", `/html/${li}`)
+    }
 
     return (
         <div className="mx-auto flex flex-col md:flex-row">
