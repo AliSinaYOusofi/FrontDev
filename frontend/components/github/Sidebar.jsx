@@ -8,6 +8,7 @@ import useSlideAnimation from "@/hooks/useSlideAnimation";
 import { useNextContext } from "@/context/NextContext";
 
 import { usePathname } from 'next/navigation';
+import GitIntroduction from "./topics/GitIntroduction";
 
 
 export default function Sidebar({}) {
@@ -22,11 +23,11 @@ export default function Sidebar({}) {
     const {theme} = useNextContext();
 
     const componentsArray = [
-        
+        <GitIntroduction />
     ];
 
     const liArray = [
-        
+        "Git Introduction"
     ]
     
     const [spring] = useSlideAnimation();
