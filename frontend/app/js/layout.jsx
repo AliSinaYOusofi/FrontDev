@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from '@/components/Navbar/Navbar'
-import Sidebar from '@/components/github/Sidebar'
+import Sidebar from '@/components/js/Sidebar'
 import React from 'react'
 import { useNextContext } from '@/context/NextContext';
 
