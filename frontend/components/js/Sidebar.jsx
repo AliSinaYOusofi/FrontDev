@@ -27,7 +27,7 @@ export default function Sidebar({}) {
     ];
 
     const liArray = [
-        "Git Introduction"
+        "JS Introduction"
     ]
     
     const [spring] = useSlideAnimation();
