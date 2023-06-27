@@ -186,7 +186,7 @@ export default function Navbar() {
                             </li>
 
                             <li>
-                                <Link className=" transition hover:text-gray-500/75" href="/">
+                                <Link className=" transition hover:text-gray-500/75" href="/js">
                                 Javascript
                                 </Link>
                             </li>

@@ -9,6 +9,16 @@ import { useNextContext } from "@/context/NextContext";
 
 import { usePathname } from 'next/navigation';
 import GitIntroduction from "./topics/GitIntroduction";
+import JSSyntax from "./topics/JSSyntax";
+import JSVariables from "./topics/JSVariables";
+import JSDataTypes from "./topics/JSDataTypes";
+import JSDataTypeConversion from "./topics/JSDataTypeConversion";
+import JSNumberType from "./topics/JSNumberType";
+import JSNumberSep from "./topics/JSNumberSep";
+import JSBooleanType from "./topics/JSBooleanType";
+import JSStringType from "./topics/JSStringType";
+import JSObjectsType from "./topics/JSObjectsType";
+import JSPrimVSRef from "./topics/JSPrimVSRef";
 
 
 export default function Sidebar({}) {
@@ -23,11 +33,31 @@ export default function Sidebar({}) {
     const {theme} = useNextContext();
 
     const componentsArray = [
-        <GitIntroduction />
+        <GitIntroduction />,
+        <JSSyntax />,
+        <JSVariables />,
+        <JSDataTypes />,
+        <JSDataTypeConversion />,
+        <JSNumberType />,
+        <JSNumberSep />,
+        <JSBooleanType />,
+        <JSStringType />,
+        <JSObjectsType />,
+        <JSPrimVSRef />
     ];
 
     const liArray = [
-        "JS Introduction"
+        "JS introduction",
+        "JS syntax",
+        "JS variables",
+        "JS data types",
+        "JS data type conversion",
+        "JS number",
+        "JS readable numbers",
+        "JS boolean type",
+        "JS string type",
+        "JS Objects",
+        "JS primitive vs reference types"
     ]
     
     const [spring] = useSlideAnimation();
@@ -111,7 +141,7 @@ export default function Sidebar({}) {
     }
     
     const updateHistory = (li) => {
-        history.replaceState(window.history.state, "", `/css/${li}`)
+        history.replaceState(window.history.state, "", `/js/${li}`)
     }
     const menuItems = liArray.map( (li, index) => 
         <li 
