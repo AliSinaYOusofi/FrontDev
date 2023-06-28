@@ -19,6 +19,15 @@ import JSBooleanType from "./topics/JSBooleanType";
 import JSStringType from "./topics/JSStringType";
 import JSObjectsType from "./topics/JSObjectsType";
 import JSPrimVSRef from "./topics/JSPrimVSRef";
+import JSOperators from "./topics/JSOperators";
+import JSNullishCoal from "./topics/JSNullishCoal";
+import JSConditionals from "./topics/JSConditionals";
+import JSNestedConditionals from "./topics/JSNestedConditionals";
+import JSTernary from "./topics/JSTernary";
+import JSSwtich from "./topics/JSSwtich";
+import JSWhileDoWhile from "./topics/JSWhileDoWhile";
+import JSForLoop from "./topics/JSForLoop";
+import JSbreakandContnue from "./topics/JSbreakandContnue";
 
 
 export default function Sidebar({}) {
@@ -43,7 +52,16 @@ export default function Sidebar({}) {
         <JSBooleanType />,
         <JSStringType />,
         <JSObjectsType />,
-        <JSPrimVSRef />
+        <JSPrimVSRef />,
+        <JSOperators />,
+        <JSNullishCoal />,
+        <JSConditionals />,
+        <JSNestedConditionals />,
+        <JSTernary />,
+        <JSSwtich />,
+        <JSWhileDoWhile />,
+        <JSForLoop />,
+        <JSbreakandContnue />
     ];
 
     const liArray = [
@@ -57,7 +75,16 @@ export default function Sidebar({}) {
         "JS boolean type",
         "JS string type",
         "JS Objects",
-        "JS primitive vs reference types"
+        "JS primitive vs reference types",
+        "JS operators",
+        "JS nullish coalescing",
+        "JS if, else if and else",
+        "JS nested conditionals",
+        "JS ternary operator",
+        "JS switch statement",
+        "JS while loop",
+        "JS for loop",
+        "JS break and continue"
     ]
     
     const [spring] = useSlideAnimation();
