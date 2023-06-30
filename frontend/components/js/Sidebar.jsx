@@ -28,6 +28,9 @@ import JSSwtich from "./topics/JSSwtich";
 import JSWhileDoWhile from "./topics/JSWhileDoWhile";
 import JSForLoop from "./topics/JSForLoop";
 import JSbreakandContnue from "./topics/JSbreakandContnue";
+import JSFunctions from "./topics/JSFunctions";
+import JSFirstCLassCitizens from "./topics/JSFirstCLassCitizens";
+import JSRecursion from "./topics/JSRecursion";
 
 
 export default function Sidebar({}) {
@@ -61,7 +64,10 @@ export default function Sidebar({}) {
         <JSSwtich />,
         <JSWhileDoWhile />,
         <JSForLoop />,
-        <JSbreakandContnue />
+        <JSbreakandContnue />,
+        <JSFunctions />,
+        <JSFirstCLassCitizens />,
+        <JSRecursion />
     ];
 
     const liArray = [
@@ -84,7 +90,10 @@ export default function Sidebar({}) {
         "JS switch statement",
         "JS while loop",
         "JS for loop",
-        "JS break and continue"
+        "JS break and continue",
+        "JS functions",
+        "JS first class citizens",
+        "JS recursion"
     ]
     
     const [spring] = useSlideAnimation();
