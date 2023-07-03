@@ -31,6 +31,13 @@ import JSbreakandContnue from "./topics/JSbreakandContnue";
 import JSFunctions from "./topics/JSFunctions";
 import JSFirstCLassCitizens from "./topics/JSFirstCLassCitizens";
 import JSRecursion from "./topics/JSRecursion";
+import JSAnonFunctions from "./topics/JSAnonFunctions";
+import JSIntroductionToObjects from "./topics/JSIntroductionToObjects";
+import JSObjectDestructring from "./topics/JSObjectDestructring";
+import JSOptionalChaning from "./topics/JSOptionalChaning";
+import JSForInLoop from "./topics/JSForInLoop";
+import JSArrayDest from "./topics/JSArrayDest";
+import JSErrorHandling from "./topics/JSErrorHandling";
 
 
 export default function Sidebar({}) {
@@ -65,9 +72,16 @@ export default function Sidebar({}) {
         <JSWhileDoWhile />,
         <JSForLoop />,
         <JSbreakandContnue />,
+        <JSErrorHandling />,
         <JSFunctions />,
         <JSFirstCLassCitizens />,
-        <JSRecursion />
+        <JSRecursion />,
+        <JSAnonFunctions />,
+        <JSIntroductionToObjects />,
+        <JSObjectDestructring />,
+        <JSOptionalChaning />,
+        <JSForInLoop />,
+        <JSArrayDest />
     ];
 
     const liArray = [
@@ -91,9 +105,16 @@ export default function Sidebar({}) {
         "JS while loop",
         "JS for loop",
         "JS break and continue",
+        "JS error handling",
         "JS functions",
         "JS first class citizens",
-        "JS recursion"
+        "JS recursion",
+        "JS anonymous functions",
+        "JS object methods",
+        "JS object destructuring",
+        "JS optioanl chaining",
+        "JS for ... in loop",
+        "JS array destructuring"
     ]
     
     const [spring] = useSlideAnimation();

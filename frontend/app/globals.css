@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +13,7 @@
 }
 
 .content_container p, .content_container ul, .content_container li {
+    font-family: 'Inter', sans-serif;
     @apply text-xl  tracking-tighter mt-5;
     font-family: 'Roboto Mono', sans-serif;
 }
