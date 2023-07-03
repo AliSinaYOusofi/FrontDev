@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 .content_container h1 {
-    @apply block p-1 md:p-0 text-3xl font-bold  sm:text-4xl md:text-5xl mt-10;
+    @apply block p-1 md:p-0 text-3xl font-bold  sm:text-4xl md:text-[40px] mt-10;
+    font-family: 'Inter', sans-serif;
 }
 
 .content_container h2 {
@@ -15,7 +16,7 @@
 .content_container p, .content_container ul, .content_container li {
     font-family: 'Inter', sans-serif;
     @apply text-xl  tracking-tighter mt-5;
-    font-family: 'Roboto Mono', sans-serif;
+    font-size: 17px;
 }
 
 .content_container ul {

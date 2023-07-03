@@ -120,19 +120,19 @@ export default function InfoContainer() {
                     />
                 </div>
 
-                <div>
+                {/* <div>
                     <TechInfo
                         step="3"
                         name="Git"
                         description={"Git is a widely used distributed version control system used for tracking changes in source code during software development."}
                         svg={gitSvg}
                     />
-                </div>
+                </div> */}
 
                 <div>
 
                     <TechInfo
-                        step={"4"}
+                        step={"3"}
                         name="javascript"
                         description={"JavaScript is a high-level programming language that is commonly used for developing and implementing interactive web functionality."}
                         svg={jsSvg}

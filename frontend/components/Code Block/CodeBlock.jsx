@@ -37,7 +37,7 @@ export default function CodeBlock({code, language, showCodeEditor, onlyCode}) {
                     </code>
                 </pre>
                     <div 
-                    className={`absolute top-[0.5rem] z-10 right-5 p-2 ${!theme ? "text-black": "text-white"}`}
+                    className={`absolute top-[0.5rem] z-10 right-5 p-2 text-white`}
                     onClick={copyToClipboard}
                 >
                     {
