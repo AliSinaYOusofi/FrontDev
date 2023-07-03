@@ -215,7 +215,7 @@ export default function Sidebar({}) {
     );
 
     return (
-        <div className="mx-auto flex flex-col md:flex-row">
+        <div className="mx-auto relative flex flex-col md:flex-row">
         <animated.div
             style={{ ...spring }}
             key={spring.key}
@@ -297,7 +297,7 @@ export default function Sidebar({}) {
 
         </animated.div>
 
-        <div className={ `w-full md:w-[80%] mx-auto mt-2 content_container `}>
+        <div className={ `w-full md:w-[50%] mx-auto mt-2 content_container `}>
             
             <div className="md:p-0 px-4">
                 { component}

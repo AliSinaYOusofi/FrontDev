@@ -4,7 +4,7 @@ const useSlideAnimation = () => {
     const [spring, api] = useSpring(
         () => ({
             from: {
-                x: 100,
+                x: -100,
                 opacity: 0,
             },
     
