@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Hamburger from 'hamburger-react'
 import { useNextContext } from '@/context/NextContext';
 
-export default function Navbar() {
+export default function Navbar({display}) {
 
     //Make navbar
     const [navbar, setNavbar] = useState(false);
@@ -152,7 +152,7 @@ export default function Navbar() {
     return (
         <header className="">
             <animated.div
-                className={`${theme ? "bg-[#161B22] text-white"  : "bg-white text-black"} mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8`}
+                className={`${theme ? "bg-[#161B22] text-white"  : "bg-white text-black"} mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8 ${display ? "md:hidden" : "md:flex"} transition-[display] duration-300`}
                 key={spring.key} style={{...spring}}
                 >
                 

@@ -38,9 +38,14 @@ import JSOptionalChaning from "./topics/JSOptionalChaning";
 import JSForInLoop from "./topics/JSForInLoop";
 import JSArrayDest from "./topics/JSArrayDest";
 import JSErrorHandling from "./topics/JSErrorHandling";
+import JSOOPIntro from "./topics/JSOOPIntro";
+import JSFactoryFunctions from "./topics/JSFactoryFunctions";
+import JSObjectLiteralSyntax from "./topics/JSObjectLiteralSyntax";
+import JSThisKeyword from "./topics/JSThisKeyword";
+import JSOPPClass from "./topics/JSOPPClass";
 
 
-export default function Sidebar({}) {
+export default function Sidebar({display}) {
 
     const [activeListItem, setActiveListItem] = useState(null);
     const [component, setComponent] = useState(null);
@@ -81,7 +86,12 @@ export default function Sidebar({}) {
         <JSObjectDestructring />,
         <JSOptionalChaning />,
         <JSForInLoop />,
-        <JSArrayDest />
+        <JSArrayDest />,
+        <JSFactoryFunctions />,
+        <JSObjectLiteralSyntax />,
+        <JSThisKeyword />,
+        <JSOOPIntro />,
+        <JSOPPClass />
     ];
 
     const liArray = [
@@ -114,7 +124,12 @@ export default function Sidebar({}) {
         "JS object destructuring",
         "JS optioanl chaining",
         "JS for ... in loop",
-        "JS array destructuring"
+        "JS array destructuring",
+        "JS factory functions",
+        "JS object literal syntax",
+        "JS this keyword",
+        "JS OOP",
+        "JS classes"
     ]
     
     const [spring] = useSlideAnimation();
@@ -219,7 +234,7 @@ export default function Sidebar({}) {
         <animated.div
             style={{ ...spring }}
             key={spring.key}
-            className={`${theme ? "md:bg-[#0D1117] text-white"  : "bg-white text-black"}`}
+            className={`${theme ? "md:bg-[#0D1117] text-white"  : "bg-white text-black"} ${display ? "md:hidden" : "md:block"}`}
         >
             <form className="w-full md:w-fit mt-4 md:mt-0">
                 <div className="relative hidden md:block  md:px-4  px-4 py-2">
@@ -291,7 +306,7 @@ export default function Sidebar({}) {
                 </details>
             </div>
 
-            <ul className={`sidebar_li  hidden md:block w-full md:px-4 px-1 text-xs md:text-base overflow-scroll scrollbar-hide h-[70%] sticky list-inside `}>
+            <ul className={`sidebar_li   hidden md:block w-full md:px-4 px-1 text-xs md:text-base overflow-scroll scrollbar-hide h-[70%] sticky list-inside `}>
                 {menuItems}
             </ul>
 
