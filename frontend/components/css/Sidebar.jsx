@@ -62,7 +62,7 @@ import CSSMedaiQueries from "./topics/CSSMedaiQueries";
 import { usePathname } from 'next/navigation';
 
 
-export default function Sidebar({}) {
+export default function Sidebar({display}) {
 
     const [activeListItem, setActiveListItem] = useState(null);
     const [component, setComponent] = useState(null);
@@ -158,7 +158,7 @@ export default function Sidebar({}) {
         "CSS Overflow",
         "CSS Float",
         "CSS Combinators",
-        "CSS Pseudo-Classes",
+        "CSS Pseudo-Classes", 
         "CSS Pseudo-Elements",
         "CSS Opacity",
         "CSS Attr Selector",
@@ -283,7 +283,7 @@ export default function Sidebar({}) {
         <animated.div
             style={{ ...spring }}
             key={spring.key}
-            className={`${theme ? "md:bg-[#0D1117] text-white"  : "bg-white text-black"}`}
+            className={`${theme ? "md:bg-[#0D1117] text-white"  : "bg-white text-black"} ${display ? "md:hidden" : "md:block"}`}
         >
             <form className="w-full md:w-fit mt-4 md:mt-0">
                 <div className="relative hidden md:block  md:px-4  px-4 py-2">
@@ -361,7 +361,7 @@ export default function Sidebar({}) {
 
         </animated.div>
 
-        <div className={ `w-full md:w-[80%] mx-auto mt-2 content_container `}>
+        <div className={ `w-full md:w-[50%] mx-auto mt-2 content_container `}>
             
             <div className="md:p-0 px-4">
                 { component}

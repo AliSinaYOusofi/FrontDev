@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 import { useNextContext } from '@/context/NextContext';
 import BackToTop from '@/components/Back To Top/BackToTop';
 
-export default function layout({params}) {
+export default function layout({params}) { 
 
     const {theme} = useNextContext()
     const [eye, setEye] = useState(false)
