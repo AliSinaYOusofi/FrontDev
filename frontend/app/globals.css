@@ -17,6 +17,8 @@
     font-family: 'Inter', sans-serif;
     @apply text-xl  tracking-tighter mt-5;
     font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
 }
 
 .content_container ul {
