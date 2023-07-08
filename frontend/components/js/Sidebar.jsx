@@ -45,6 +45,8 @@ import JSThisKeyword from "./topics/JSThisKeyword";
 import JSOPPClass from "./topics/JSOPPClass";
 import JSOOPGettersAndSetters from "./topics/JSOOPGettersAndSetters";
 import JSOOPNewClass from "./topics/JSOOPNewClass";
+import JSComputedObjectProp from "./topics/JSComputedObjectProp";
+import JSInheritance from "./topics/JSInheritance";
 
 
 export default function Sidebar({display}) {
@@ -95,7 +97,9 @@ export default function Sidebar({display}) {
         <JSOOPIntro />,
         <JSOPPClass />,
         <JSOOPGettersAndSetters />,
-        <JSOOPNewClass />
+        <JSOOPNewClass />,
+        <JSComputedObjectProp />,
+        <JSInheritance />
     ];
 
     const liArray = [
@@ -135,7 +139,9 @@ export default function Sidebar({display}) {
         "JS OOP",
         "JS classes",
         "JS getters and setters",
-        "JS class expression"
+        "JS class expression",
+        "JS computed object property",
+        "JS inheritance"
     ]
     
     const [spring] = useSlideAnimation();
