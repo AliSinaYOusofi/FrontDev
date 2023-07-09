@@ -52,6 +52,9 @@ class Circle extends Shape {
         return Math.PI * Math.pow(this.radius, 2);
     }
 }
+
+const circle = new Circle("circle", 10)
+console.log(circle.getArea()) // output: 314.1592653589793
             `}
             language="javascript"
             onlyCode={true}
@@ -86,6 +89,11 @@ class Circle extends Shape {
         return Math.PI * Math.pow(this.radius, 2);
     }
 }
+
+const circle = new Circle("circle", 10)
+console.log(circle.getArea()) 
+// output:
+// The area of circle is 314.1592653589793.
             `}
             language="javascript"
             onlyCode={true}
