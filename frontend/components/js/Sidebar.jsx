@@ -48,6 +48,8 @@ import JSOOPNewClass from "./topics/JSOOPNewClass";
 import JSComputedObjectProp from "./topics/JSComputedObjectProp";
 import JSInheritance from "./topics/JSInheritance";
 import JSPrototypalInheritance from "./topics/JSPrototypalInheritance";
+import JSStaticMethods from "./topics/JSStaticMethods";
+import JSPrivateField from "./topics/JSPrivateField";
 
 
 export default function Sidebar({display}) {
@@ -101,7 +103,9 @@ export default function Sidebar({display}) {
         <JSOOPNewClass />,
         <JSComputedObjectProp />,
         <JSInheritance />,
-        <JSPrototypalInheritance />
+        <JSPrototypalInheritance />,
+        <JSStaticMethods />,
+        <JSPrivateField />
     ];
 
     const liArray = [
@@ -144,7 +148,9 @@ export default function Sidebar({display}) {
         "JS class expression",
         "JS computed object property",
         "JS inheritance",
-        "JS prototypal inheritance"
+        "JS prototypal inheritance",
+        "JS static methods",
+        "JS private field"
     ]
     
     const [spring] = useSlideAnimation();
