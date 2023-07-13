@@ -50,6 +50,9 @@ import JSInheritance from "./topics/JSInheritance";
 import JSPrototypalInheritance from "./topics/JSPrototypalInheritance";
 import JSStaticMethods from "./topics/JSStaticMethods";
 import JSPrivateField from "./topics/JSPrivateField";
+import JSPrivateMethod from "./topics/JSPrivateMethod";
+import StaticMethods from "./topics/StaticMethods";
+import JSStaticProps from "./topics/JSStaticProps";
 
 
 export default function Sidebar({display}) {
@@ -105,7 +108,10 @@ export default function Sidebar({display}) {
         <JSInheritance />,
         <JSPrototypalInheritance />,
         <JSStaticMethods />,
-        <JSPrivateField />
+        <JSPrivateField />,
+        <JSPrivateMethod />,
+        <JSStaticProps />,
+        <StaticMethods />
     ];
 
     const liArray = [
@@ -150,7 +156,10 @@ export default function Sidebar({display}) {
         "JS inheritance",
         "JS prototypal inheritance",
         "JS static methods",
-        "JS private field"
+        "JS private field",
+        "JS private methods",
+        "JS static properties",
+        "JS static methods"
     ]
     
     const [spring] = useSlideAnimation();
