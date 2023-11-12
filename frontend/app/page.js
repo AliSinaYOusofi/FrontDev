@@ -11,7 +11,7 @@ import { darkThemeSetup, lightThemeSetup } from '@/utils/themseAndFont';
 export default function Home() {
   
   const {theme} = useNextContext();
-
+  
   return (
     <main className={`${theme ? "bg-[#010409] text-white" : "bg-white"}`}>
         <Navbar />

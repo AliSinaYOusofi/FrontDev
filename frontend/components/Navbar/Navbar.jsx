@@ -5,11 +5,13 @@ import { useSpring } from '@react-spring/web';
 import Link from 'next/link';
 import Hamburger from 'hamburger-react'
 import { useNextContext } from '@/context/NextContext';
+import NotLoggedInCard from '../NotLoggedInCard/NotLoggedInCard';
 
 export default function Navbar({display}) {
 
     //Make navbar
     const [navbar, setNavbar] = useState(false);
+    const [showNotLoggedInCard, setNotLoggedInCard] = useState(false)
     const {theme, setTheme} = useNextContext();
     
     const [spring] = useSpring(
@@ -72,7 +74,7 @@ export default function Navbar({display}) {
     const ulList = (<nav key={mobileNavAnimated.key} style={mobileNavAnimated} className={`block md:hidden lg:hidden transition-all duration-300 ${theme  ? "bg-[#0D1117]" : "bg-gray-50"} mt-10 py-10 w-[90%] mx-auto rounded-md mb-5`}>
     <ul className="flex flex-col items-start ml-10  justify-start gap-6 text-sm">
         <li className="">
-            <Link className="  transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/">
+            <Link className="  transition hover:text-gray-600 flex items-center justify-center flex-row-reverse" href="/html">
                 HTML5
                 <svg
                 viewBox="0 0 1024 1024"
@@ -149,102 +151,126 @@ export default function Navbar({display}) {
     </nav>)
 
 
+    const handleLogin = () => {
+        setNotLoggedInCard(true)
+    }
+    
+    const handleSignup = () => {
+        setNotLoggedInCard(true)
+
+    }
+
     return (
-        <header className="">
-            <animated.div
-                className={`${theme ? "bg-[#161B22] text-white"  : "bg-white text-black"} mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8 ${display ? "md:hidden" : "md:flex"} transition-[display] duration-300`}
-                key={spring.key} style={{...spring}}
-                >
-                
-                <span>
-                    <Link href="/">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                        </svg>
-                    </Link>
-                </span>
+        
+            <header className="">
+                <animated.div
+                    className={`${theme ? "bg-[#161B22] text-white"  : "bg-white text-black"} mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8 ${display ? "md:hidden" : "md:flex"} transition-[display] duration-300`}
+                    key={spring.key} style={{...spring}}
+                    >
+                    
+                    <span>
+                        <Link href="/">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                        </Link>
+                    </span>
 
-                <span onClick={() => setTheme(prevTheme => !prevTheme)} className="block cursor-pointer text-teal-600" href="/">
-                    {
-                        theme
-                        ?
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                        </svg>
-                        :
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-                        </svg>
+                    <span onClick={() => setTheme(prevTheme => !prevTheme)} className="block cursor-pointer text-teal-600" href="/">
+                        {
+                            theme
+                            ?
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                            </svg>
+                            :
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                            </svg>
 
-                    }
-                </span>
+                        }
+                    </span>
 
-                
+                    
 
-                <div className="flex flex-1 items-center justify-end md:justify-between">
-                    <nav className={`hidden md:block`}>
-                        <ul  className="flex items-center gap-6 text-sm">
-                            <li>
-                                <Link className="transition-[font] hover:text-gray-500/75" href="/html">
-                                    HTML5
-                                </Link>
-                            </li>
+                    <div className="flex flex-1 items-center justify-end md:justify-between">
+                        <nav className={`hidden md:block`}>
+                            <ul  className="flex items-center gap-6 text-sm">
+                                <li>
+                                    <Link className="transition-[font] hover:text-gray-500/75" href="/html">
+                                        HTML5
+                                    </Link>
+                                </li>
 
-                            <li>
-                                <Link className=" transition hover:text-gray-500/75" href="/css">
-                                CSS3
-                                </Link>
-                            </li>
+                                <li>
+                                    <Link className=" transition hover:text-gray-500/75" href="/css">
+                                    CSS3
+                                    </Link>
+                                </li>
 
-                            <li>
-                                <Link className=" transition hover:text-gray-500/75" href="/js">
-                                Javascript
-                                </Link>
-                            </li>
+                                <li>
+                                    <Link className=" transition hover:text-gray-500/75" href="/js">
+                                    Javascript
+                                    </Link>
+                                </li>
 
-                            {/* <li>
-                                <Link className=" transition hover:text-gray-500/75" href="/">
-                                React
-                                </Link>
-                            </li> */}
-                        </ul>
-                    </nav>
+                                {/* <li>
+                                    <Link className=" transition hover:text-gray-500/75" href="/">
+                                    React
+                                    </Link>
+                                </li> */}
+                            </ul>
+                        </nav>
 
-                    <div className="flex items-center gap-4">
-                        <div className="sm:flex sm:gap-4">
+                        <div className="flex items-center gap-4">
+                            <div className="sm:flex sm:gap-4">
+                                <button
+                                    className="block bg-[#2EA043] hover:bg-[#28ae40] rounded-md px-5 py-2.5 text-sm font-medium text-white"
+                                    href="/"
+                                    onClick={handleLogin}
+                                >
+                                    Login
+                                </button>
+
+                                <button
+                                    className="hidden border-2 border-[#2EA043] hover:text-white hover:bg-[#2EA043] rounded-md px-5 py-2.5 text-sm font-medium  sm:block"
+                                    href="/"
+                                    onClick={handleSignup}
+                                >
+                                    Register
+                                </button>
+                            </div>
+
                             <button
-                                className="block bg-[#2EA043] hover:bg-[#28ae40] rounded-md px-5 py-2.5 text-sm font-medium text-white"
-                                href="/"
-                            >
-                                Login
-                            </button>
-
-                            <button
-                                className="hidden border-2 border-[#2EA043] hover:text-white hover:bg-[#2EA043] rounded-md px-5 py-2.5 text-sm font-medium  sm:block"
-                                href="/"
-                            >
-                                Register
+                                className="block rounded-md bg-white/10 md:hidden"
+                                onClick={handleClickOnBurgerMenu}>
+                        
+                                <Hamburger size={20}/>
                             </button>
                         </div>
-
-                        <button
-                            className="block rounded-md bg-white/10 md:hidden"
-                            onClick={handleClickOnBurgerMenu}>
-                    
-                            <Hamburger size={20}/>
-                        </button>
                     </div>
-                </div>
-            </animated.div>
-            <animated.div className="" key={mobileNavAnimated.key} style={{...mobileNavAnimated}}>
+                </animated.div>
+                <animated.div className="" key={mobileNavAnimated.key} style={{...mobileNavAnimated}}>
+                    {
+                        navbar 
+                        ?
+                        ulList
+                        : null
+                    }
+                </animated.div>
+                <div id="login" className="px-4">
                 {
-                    navbar 
-                    ?
-                    ulList
+                    showNotLoggedInCard ?
+                    <>
+                        <div className="blurry-background flex items-center justify-center">
+                            <NotLoggedInCard clicked={showNotLoggedInCard} onClose={setNotLoggedInCard}/> 
+                        </div>
+                    </>
                     : null
                 }
-            </animated.div>
-        </header>
+            </div>
+            </header>
+        
 
     )
 }
